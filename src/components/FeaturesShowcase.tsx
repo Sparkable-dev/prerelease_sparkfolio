@@ -43,46 +43,58 @@ const features = [
 
 export function FeaturesShowcase() {
   return (
-    <section id="features" className="py-20 bg-muted/20">
+    <section
+      id="features"
+      className="py-24 bg-gradient-to-b from-background to-muted/30"
+    >
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+            <Sparkles className="w-4 h-4" />
+            <span>Powerful Features</span>
+          </div>
+          <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
             Everything You'll Need to Launch
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             From concept to execution, SPARKFOLIO will provide all the tools and
             assets your startup needs to establish a professional brand
             presence.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
               <div
                 key={index}
-                className="group p-8 rounded-2xl bg-card border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                className="group relative p-8 rounded-3xl bg-card/50 backdrop-blur-sm border border-border/50 hover:border-primary/30 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-2"
               >
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                  <Icon className="w-6 h-6 text-primary" />
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="relative">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <Icon className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-4 text-foreground">
+                    {feature.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {feature.description}
+                  </p>
                 </div>
-                <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {feature.description}
-                </p>
               </div>
             );
           })}
         </div>
 
         {/* CTA Section */}
-        <div className="text-center mt-16">
-          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary/10 text-primary font-medium mb-8">
+        <div className="text-center">
+          <div className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-chart-1 to-chart-1 text-black font-semibold mb-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
             <Zap className="w-5 h-5" />
             <span>Ready to transform your startup's brand?</span>
           </div>
-          <p className="text-lg text-muted-foreground mb-8">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Join thousands of entrepreneurs who are excited about the future of
             AI-powered brand design
           </p>

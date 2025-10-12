@@ -46,82 +46,82 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: #F5FBFD;
-  --foreground: #4D5CD7;
-  --card: #F5FBFD;
-  --card-foreground: #4D5CD7;
-  --popover: #F5FBFD;
-  --popover-foreground: #4D5CD7;
-  --primary: #4D5CD7;
-  --primary-foreground: #F5FBFD;
-  --secondary: #BF69F2;
-  --secondary-foreground: #F5FBFD;
-  --muted: #F5FBFD;
-  --muted-foreground: #4D5CD7;
-  --accent: #BF69F2;
-  --accent-foreground: #F5FBFD;
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: #BF69F2;
-  --input: #BF69F2;
-  --ring: #4D5CD7;
-  --chart-1: #FBAB20;
-  --chart-2: #BF69F2;
-  --chart-3: #4D5CD7;
-  --chart-4: #FBAB20;
-  --chart-5: #BF69F2;
-  --sidebar: #F5FBFD;
-  --sidebar-foreground: #4D5CD7;
-  --sidebar-primary: #4D5CD7;
-  --sidebar-primary-foreground: #F5FBFD;
-  --sidebar-accent: #BF69F2;
-  --sidebar-accent-foreground: #F5FBFD;
-  --sidebar-border: #BF69F2;
-  --sidebar-ring: #4D5CD7;
+  --radius: 0.75rem;
+  --background: #FAFAFA;
+  --foreground: #1A1A1A;
+  --card: #FFFFFF;
+  --card-foreground: #1A1A1A;
+  --popover: #FFFFFF;
+  --popover-foreground: #1A1A1A;
+  --primary: #6366F1;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F1F5F9;
+  --secondary-foreground: #1A1A1A;
+  --muted: #F8FAFC;
+  --muted-foreground: #64748B;
+  --accent: #8B5CF6;
+  --accent-foreground: #FFFFFF;
+  --destructive: #EF4444;
+  --border: #E2E8F0;
+  --input: #E2E8F0;
+  --ring: #6366F1;
+  --chart-1: #F59E0B;
+  --chart-2: #8B5CF6;
+  --chart-3: #6366F1;
+  --chart-4: #10B981;
+  --chart-5: #F59E0B;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #1A1A1A;
+  --sidebar-primary: #6366F1;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #F1F5F9;
+  --sidebar-accent-foreground: #1A1A1A;
+  --sidebar-border: #E2E8F0;
+  --sidebar-ring: #6366F1;
   
   /* Custom button colors */
-  --button-primary: #FBAB20;
-  --button-primary-foreground: #4D5CD7;
-  --button-primary-hover: #e6a01c;
+  --button-primary: #F59E0B;
+  --button-primary-foreground: #FFFFFF;
+  --button-primary-hover: #D97706;
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: #F5FBFD;
-  --card: oklch(0.205 0 0);
-  --card-foreground: #F5FBFD;
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: #F5FBFD;
-  --primary: #BF69F2;
-  --primary-foreground: #F5FBFD;
-  --secondary: #BF69F2;
-  --secondary-foreground: #F5FBFD;
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: #F5FBFD;
-  --accent: #BF69F2;
-  --accent-foreground: #F5FBFD;
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: #BF69F2;
-  --input: #BF69F2;
-  --ring: #BF69F2;
-  --chart-1: #FBAB20;
-  --chart-2: #BF69F2;
-  --chart-3: #4D5CD7;
-  --chart-4: #FBAB20;
-  --chart-5: #BF69F2;
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: #F5FBFD;
-  --sidebar-primary: #BF69F2;
-  --sidebar-primary-foreground: #F5FBFD;
-  --sidebar-accent: #BF69F2;
-  --sidebar-accent-foreground: #F5FBFD;
-  --sidebar-border: #BF69F2;
-  --sidebar-ring: #BF69F2;
+  --background: #0F0F0F;
+  --foreground: #FAFAFA;
+  --card: #1A1A1A;
+  --card-foreground: #FAFAFA;
+  --popover: #1A1A1A;
+  --popover-foreground: #FAFAFA;
+  --primary: #8B5CF6;
+  --primary-foreground: #FFFFFF;
+  --secondary: #262626;
+  --secondary-foreground: #FAFAFA;
+  --muted: #171717;
+  --muted-foreground: #A3A3A3;
+  --accent: #6366F1;
+  --accent-foreground: #FFFFFF;
+  --destructive: #EF4444;
+  --border: #262626;
+  --input: #262626;
+  --ring: #8B5CF6;
+  --chart-1: #F59E0B;
+  --chart-2: #8B5CF6;
+  --chart-3: #6366F1;
+  --chart-4: #10B981;
+  --chart-5: #F59E0B;
+  --sidebar: #1A1A1A;
+  --sidebar-foreground: #FAFAFA;
+  --sidebar-primary: #8B5CF6;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #262626;
+  --sidebar-accent-foreground: #FAFAFA;
+  --sidebar-border: #262626;
+  --sidebar-ring: #8B5CF6;
   
   /* Custom button colors for dark mode */
-  --button-primary: #FBAB20;
-  --button-primary-foreground: #4D5CD7;
-  --button-primary-hover: #e6a01c;
+  --button-primary: #F59E0B;
+  --button-primary-foreground: #FFFFFF;
+  --button-primary-hover: #D97706;
 }
 
 @layer base {
@@ -144,7 +144,7 @@
   .btn-primary:hover {
     background-color: var(--button-primary-hover);
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(251, 171, 32, 0.3);
+    box-shadow: 0 8px 25px rgba(245, 158, 11, 0.3);
   }
   
   .btn-primary:active {

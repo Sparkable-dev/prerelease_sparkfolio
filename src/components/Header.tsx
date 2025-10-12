@@ -20,9 +20,7 @@ export function Header() {
               />
             </div>
             <div className="flex items-center">
-              <span className="text-primary text-2xl font-inter">
-                Spark
-              </span>
+              <span className="text-primary text-2xl font-inter">Spark</span>
               <span className="font-bold text-primary text-3xl ml-1 mt-2 font-italianno">
                 Folio
               </span>
@@ -44,10 +42,10 @@ export function Header() {
               Screenshots
             </a>
             <a
-              href="#testimonials"
+              href="#pricing"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              Testimonials
+              Pricing
             </a>
             <a
               href="#waitlist"

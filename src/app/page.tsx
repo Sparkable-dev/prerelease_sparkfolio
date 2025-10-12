@@ -1,10 +1,13 @@
 import { Header } from "@/components/Header";
 import { HeroSectionDemo } from "@/components/Hero";
 import { ProductScreenshots } from "@/components/ProductScreenshots";
+import { AIChatDemo } from "@/components/AIChatDemo";
+import { ThemePresetSelector } from "@/components/ThemePresetSelector";
 import { FeaturesShowcase } from "@/components/FeaturesShowcase";
+import { PricingSection } from "@/components/PricingSection";
 import { EmailCollection } from "@/components/EmailCollection";
-import { SocialProof } from "@/components/SocialProof";
 import { Footer } from "@/components/Footer";
+import { FloatingCTA } from "@/components/FloatingCTA";
 
 export default function Home() {
   return (
@@ -12,10 +15,13 @@ export default function Home() {
       <Header />
       <HeroSectionDemo />
       <ProductScreenshots />
+      <AIChatDemo />
+      <ThemePresetSelector />
       <FeaturesShowcase />
-      <SocialProof />
+      <PricingSection />
       <EmailCollection />
       <Footer />
+      <FloatingCTA />
     </div>
   );
 }
