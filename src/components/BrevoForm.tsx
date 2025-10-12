@@ -30,16 +30,16 @@ export function BrevoForm({ className }: BrevoFormProps) {
 
   // Different Brevo form URLs for light and dark themes
   const lightFormUrl =
-    "https://44603cd0.sibforms.com/serve/MUIFAA6pft38oSukJ7oTZyiNoaZYF47PRQcksn5ZbePoMFYWY5rmHTFOJkw79ma_5rtiUmz9BZ5KlcEKCEkfIvTIfsj8k21VeC6RS-nLDBpSAamy98JkOTG5E_0ijj-FFd0EqY_wLbYy0FPJ3cKctgWWPjPj1BY-uBVSSUt-fHZBbfSML1aU_rRyq0t99BHhsKq2FdPhAjGhbXnU";
+    "https://44603cd0.sibforms.com/serve/MUIFAHbbkPh7BJn_yrTFC_lP29Xd-ryPSm9iK63XoqLbrpnzmbbnOM-oQR-ClbRUb1CcIVs2w5fbIzP3L-bdtAeW5N3BThb74ZfSMbZOkL7Fkck3q2EV5cF4LlOzr261Q3rrRfbPFckpSa8JkAWAIXx0k_Y-7ywQHTZ7KbinC7z4dnrCgVjUaTJdJQvi-q8lz2cA-Q7NK_Y5Phxb";
 
   // For dark theme, you can use the same URL or a different one if you have a dark-themed form
     const darkFormUrl =
-        "https://44603cd0.sibforms.com/serve/MUIFAJscfQUH9FhQdzschQv6ZOAUcNeLJRqQBkfmdtf5IcttV1aA5PXwFIFgWZhhGuwKVHeTVHdh6MfOEqwKtNswym-N9PsTPVAS6MVZbvSPXLmtOyy1QrFJX4tr85prrhAmxeHMaYPol-DJvIZBi515pd1egy2Nq2mhlxCvb9rfeFzKPpDyZyfbR313XAfO8LzfmzDvUn-BCMVH";
+      "https://44603cd0.sibforms.com/serve/MUIFAAvE3xqG0VThZf5sNSszm5spMoxPZDR-U-34SkTcpJcvNyeQzuHEkVzK7vJ-pe31edlwgudMOdthJi-By_h92AryCGJSErUF3Jk_btWq9NgIeLXK_dy4MNny7KZsZ_ZKsTnCqSRiv8tQ_itECIzdodlbR3EtciGriKezyIA6R0GEIRBU4r9MY_8JUMWHpsWGu2VHFg7MNeov";
   return (
     <div className={className}>
       <iframe
-        width="540"
-        height="400"
+        width="600"
+        height="500"
         src={isDark ? darkFormUrl : lightFormUrl}
         frameBorder="0"
         scrolling="auto"
