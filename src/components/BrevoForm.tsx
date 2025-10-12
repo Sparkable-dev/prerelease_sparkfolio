@@ -33,9 +33,8 @@ export function BrevoForm({ className }: BrevoFormProps) {
     "https://44603cd0.sibforms.com/serve/MUIFAA6pft38oSukJ7oTZyiNoaZYF47PRQcksn5ZbePoMFYWY5rmHTFOJkw79ma_5rtiUmz9BZ5KlcEKCEkfIvTIfsj8k21VeC6RS-nLDBpSAamy98JkOTG5E_0ijj-FFd0EqY_wLbYy0FPJ3cKctgWWPjPj1BY-uBVSSUt-fHZBbfSML1aU_rRyq0t99BHhsKq2FdPhAjGhbXnU";
 
   // For dark theme, you can use the same URL or a different one if you have a dark-themed form
-  const darkFormUrl =
-    "https://44603cd0.sibforms.com/serve/MUIFAIb-ofpa_4KlBZfB4W0c-eUXoyRQvXhVDARpw99EBytbAYS04KoeRJaDJsIcfGjOWVT5gAXcrV9KwP5a3j7VXVPnfx0Tek6HlVkE2kLoE2DiQjp8xpdCge5mS3rGh6FIZ67OgGttpEFwl41v4AWpkyl5sWOQztt5m1sH4bUyJ7LYMBjDYXrg6yTg8KYIDAObblELIBzLoTYy";
-
+    const darkFormUrl =
+        "https://44603cd0.sibforms.com/serve/MUIFAJscfQUH9FhQdzschQv6ZOAUcNeLJRqQBkfmdtf5IcttV1aA5PXwFIFgWZhhGuwKVHeTVHdh6MfOEqwKtNswym-N9PsTPVAS6MVZbvSPXLmtOyy1QrFJX4tr85prrhAmxeHMaYPol-DJvIZBi515pd1egy2Nq2mhlxCvb9rfeFzKPpDyZyfbR313XAfO8LzfmzDvUn-BCMVH";
   return (
     <div className={className}>
       <iframe
