@@ -67,28 +67,28 @@ export function Footer() {
             <ul className="space-y-3 text-muted-foreground">
               <li>
                 <a
+                  href="#hero"
+                  className="hover:text-foreground transition-colors duration-300"
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
                   href="#features"
                   className="hover:text-foreground transition-colors duration-300"
                 >
                   Features
                 </a>
               </li>
-              {/* <li>
-                <a
-                  href="#screenshots"
-                  className="hover:text-foreground transition-colors duration-300"
-                >
-                  Screenshots
-                </a>
-              </li>
               <li>
                 <a
-                  href="#pricing"
+                  href="#impact"
                   className="hover:text-foreground transition-colors duration-300"
                 >
-                  Pricing
+                  Impact & Results
                 </a>
-              </li> */}
+              </li>
               <li>
                 <a
                   href="#waitlist"
@@ -106,26 +106,28 @@ export function Footer() {
             <ul className="space-y-3 text-muted-foreground">
               <li>
                 <a
-                  href="/about"
+                  href="#impact"
                   className="hover:text-foreground transition-colors duration-300"
                 >
-                  About
+                  About Us
                 </a>
               </li>
               <li>
                 <a
-                  href="/blog"
+                  href="mailto:sudu@sparkfolio.dev"
                   className="hover:text-foreground transition-colors duration-300"
                 >
-                  Blog
+                  Contact
                 </a>
               </li>
               <li>
                 <a
-                  href="/careers"
+                  href="https://www.linkedin.com/in/sudarsan-ananth/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="hover:text-foreground transition-colors duration-300"
                 >
-                  Careers
+                  Founder
                 </a>
               </li>
               <li>
@@ -133,7 +135,7 @@ export function Footer() {
                   href="#waitlist"
                   className="hover:text-foreground transition-colors duration-300"
                 >
-                  Contact
+                  Join Waitlist
                 </a>
               </li>
             </ul>

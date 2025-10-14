@@ -39,46 +39,46 @@ const pageGroups: CompanyPage[][] = [
   [
     {
       id: 1,
-      companyName: "Tech Innovations Inc.",
+      companyName: "Veritas",
       description:
         "Leading provider of cutting-edge AI solutions and cloud infrastructure. Transforming businesses through innovative technology and digital transformation services.",
-      image: "/images/landing-white.png",
+      image: "/images/veritas.png",
       ctaText: "Learn More",
       ctaLink: "#",
     },
     {
       id: 2,
-      companyName: "Green Energy Solutions",
+      companyName: "Veritas",
       description:
         "Pioneering sustainable energy technologies for a cleaner future. Our solar and wind solutions help companies reduce their carbon footprint while saving costs.",
-      image: "/images/landing-dark.png",
+      image: "/images/veritas1.png",
       ctaText: "Explore Solutions",
       ctaLink: "#",
     },
     {
       id: 3,
-      companyName: "HealthTech Dynamics",
+      companyName: "Veritas",
       description:
         "Revolutionizing healthcare with telemedicine platforms and AI-powered diagnostic tools. Making quality healthcare accessible to everyone, everywhere.",
-      image: "/images/landing-white.png",
+      image: "/images/veritas2.png",
       ctaText: "Get Started",
       ctaLink: "#",
     },
     {
       id: 4,
-      companyName: "FinTech Revolution",
+      companyName: "Veritas",
       description:
         "Modernizing financial services with blockchain technology and digital banking solutions. Secure, fast, and user-friendly financial products for the digital age.",
-      image: "/images/landing-white.png",
+      image: "/images/veritas3.png",
       ctaText: "Join Now",
       ctaLink: "#",
     },
     {
       id: 5,
-      companyName: "EduTech Academy",
+      companyName: "Veritas",
       description:
         "Transforming education through interactive learning platforms and personalized learning experiences. Empowering students and educators worldwide.",
-      image: "/images/landing-white.png",
+      image: "/images/veritas4.png",
       ctaText: "Start Learning",
       ctaLink: "#",
     },
@@ -87,46 +87,46 @@ const pageGroups: CompanyPage[][] = [
   [
     {
       id: 6,
-      companyName: "Smart City Solutions",
+      companyName: "Embergrill",
       description:
         "Building intelligent urban infrastructure with IoT sensors and data analytics. Creating sustainable, efficient, and livable cities for the future.",
-      image: "/images/landing-white.png",
+      image: "/images/grill.png",
       ctaText: "Discover More",
       ctaLink: "#",
     },
     {
       id: 7,
-      companyName: "AgriTech Innovations",
+      companyName: "Embergrill",
       description:
         "Revolutionizing agriculture with precision farming, drone technology, and AI-powered crop monitoring. Feeding the world sustainably.",
-      image: "/images/landing-white.png",
+      image: "/images/grill1.png",
       ctaText: "View Products",
       ctaLink: "#",
     },
     {
       id: 8,
-      companyName: "RetailTech Pro",
+      companyName: "Embergrill",
       description:
         "Enhancing retail experiences with omnichannel solutions, inventory management, and customer analytics. The future of retail is here.",
-      image: "/images/landing-white.png",
+      image: "/images/grill2.png",
       ctaText: "Shop Now",
       ctaLink: "#",
     },
     {
       id: 9,
-      companyName: "LogiTech Systems",
+      companyName: "Embergrill",
       description:
         "Optimizing supply chains with real-time tracking, predictive analytics, and automated warehousing. Delivering efficiency at scale.",
-      image: "/images/landing-white.png",
+      image: "/images/grill3.png",
       ctaText: "Track Shipment",
       ctaLink: "#",
     },
     {
       id: 10,
-      companyName: "MediaTech Studios",
+      companyName: "Embergrill",
       description:
         "Creating immersive content experiences with VR, AR, and AI-powered content generation. The next generation of entertainment.",
-      image: "/images/landing-white.png",
+      image: "/images/grill4.png",
       ctaText: "Watch Demo",
       ctaLink: "#",
     },
@@ -135,46 +135,46 @@ const pageGroups: CompanyPage[][] = [
   [
     {
       id: 11,
-      companyName: "CyberSec Solutions",
+      companyName: "Nexio",
       description:
         "Protecting digital assets with advanced cybersecurity frameworks and threat intelligence. Your business security is our priority.",
-      image: "/images/landing-white.png",
+      image: "/images/nexio.png",
       ctaText: "Secure Now",
       ctaLink: "#",
     },
     {
       id: 12,
-      companyName: "PropTech Ventures",
+      companyName: "Nexio",
       description:
         "Transforming real estate with virtual tours, smart building management, and property analytics. The future of property technology.",
-      image: "/images/landing-white.png",
+      image: "/images/nexio1.png",
       ctaText: "Explore Properties",
       ctaLink: "#",
     },
     {
       id: 13,
-      companyName: "TravelTech Global",
+      companyName: "Nexio",
       description:
         "Redefining travel experiences with AI-powered recommendations, seamless booking, and personalized itineraries. Your journey starts here.",
-      image: "/images/landing-white.png",
+      image: "/images/nexio2.png",
       ctaText: "Plan Trip",
       ctaLink: "#",
     },
     {
       id: 14,
-      companyName: "FoodTech Innovations",
+      companyName: "Nexio",
       description:
         "Revolutionizing food industry with smart kitchens, delivery optimization, and sustainable food production. Taste the future.",
-      image: "/images/landing-white.png",
+      image: "/images/nexio3.png",
       ctaText: "Order Now",
       ctaLink: "#",
     },
     {
       id: 15,
-      companyName: "SportsTech Arena",
+      companyName: "Nexio",
       description:
         "Enhancing athletic performance with wearable technology, data analytics, and virtual training. Where technology meets sports.",
-      image: "/images/landing-white.png",
+      image: "/images/nexio4.png",
       ctaText: "Start Training",
       ctaLink: "#",
     },
@@ -183,46 +183,46 @@ const pageGroups: CompanyPage[][] = [
   [
     {
       id: 16,
-      companyName: "SpaceTech Explorers",
+      companyName: "Sipora",
       description:
         "Pioneering space technology with satellite networks, space tourism, and interplanetary communication. The final frontier awaits.",
-      image: "/images/landing-white.png",
+      image: "/images/sipora.png",
       ctaText: "Launch Mission",
       ctaLink: "#",
     },
     {
       id: 17,
-      companyName: "BioTech Labs",
+      companyName: "Sipora",
       description:
         "Advancing biotechnology with gene therapy, personalized medicine, and synthetic biology. Healing the world, one breakthrough at a time.",
-      image: "/images/landing-white.png",
+      image: "/images/sipora1.png",
       ctaText: "Learn More",
       ctaLink: "#",
     },
     {
       id: 18,
-      companyName: "RoboTech Industries",
+      companyName: "Sipora",
       description:
         "Building the future with autonomous robots, industrial automation, and AI-powered robotics. The age of intelligent machines.",
-      image: "/images/landing-white.png",
+      image: "/images/sipora2.png",
       ctaText: "See Robots",
       ctaLink: "#",
     },
     {
       id: 19,
-      companyName: "QuantumTech Research",
+      companyName: "Sipora",
       description:
         "Unlocking quantum computing potential with advanced algorithms, quantum cryptography, and quantum machine learning. The quantum revolution.",
-      image: "/images/landing-white.png",
+      image: "/images/sipora3.png",
       ctaText: "Explore Quantum",
       ctaLink: "#",
     },
     {
       id: 20,
-      companyName: "NeuroTech Systems",
+      companyName: "Sipora",
       description:
         "Advancing brain-computer interfaces and neural technology for medical applications and human enhancement. The mind-machine connection.",
-      image: "/images/landing-white.png",
+      image: "/images/sipora4.png",
       ctaText: "Connect Mind",
       ctaLink: "#",
     },
@@ -382,12 +382,12 @@ const CompanyCarousel = () => {
     >
       {/* Main Carousel Content */}
       <div className="relative group">
-        <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-card/50 backdrop-blur-sm border border-border/50 hover:shadow-3xl hover:shadow-primary/10 transition-all duration-500">
+        <div className="relative rounded-xl  shadow-2xl  backdrop-blur-sm border border-border/50 hover:shadow-3xl hover:shadow-primary/10 transition-all duration-500">
           <div className="aspect-video">
             <img
               src={currentPage.image}
               alt={`${currentPage.companyName} showcase`}
-              className="w-full h-full object-cover transition-all duration-700"
+              className="w-full h-full object-fit transition-all duration-700"
             />
           </div>
 

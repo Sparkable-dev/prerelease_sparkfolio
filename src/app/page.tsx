@@ -10,11 +10,19 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <Header />
-      <HeroSectionDemo />
+      <section id="hero">
+        <HeroSectionDemo />
+      </section>
       <AIChatDemo />
-      <FeaturesShowcase />
-      <FounderSection />
-      <EmailCollection />
+      <section id="features">
+        <FeaturesShowcase />
+      </section>
+      <section id="impact">
+        <FounderSection />
+      </section>
+      <section id="waitlist">
+        <EmailCollection />
+      </section>
       <Footer />
     </div>
   );

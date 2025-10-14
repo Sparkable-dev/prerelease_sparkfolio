@@ -32,23 +32,23 @@ export function Header() {
           {/* Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             <a
+              href="#hero"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Home
+            </a>
+            <a
               href="#features"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               Features
             </a>
-            {/* <a
-              href="#screenshots"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Screenshots
-            </a>
             <a
-              href="#pricing"
+              href="#impact"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              Pricing
-            </a> */}
+              Impact
+            </a>
             <a
               href="#waitlist"
               className="text-muted-foreground hover:text-foreground transition-colors"

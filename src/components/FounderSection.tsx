@@ -9,11 +9,11 @@ export function FounderSection() {
         {/* Heading */}
         <div className="text-center mb-12 md:mb-20">
           <h1 className="text-3xl md:text-4xl font-bold text-foreground">
-            Our Founder
+            Proven Impact & Results
           </h1>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Meet the visionary behind Sparkfolio — driving innovation and
-            technology leadership.
+            Data-driven insights that demonstrate the transformative power of
+            strategic design and brand development.
           </p>
         </div>
 
@@ -28,50 +28,58 @@ export function FounderSection() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
-              Sudharsan (Sudu) Ananth
+              ROI & Revenue Growth
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground font-medium">
-              Founder & Chief Technology Officer
+              McKinsey's analysis reveals design-forward businesses achieve 32%
+              higher revenue growth and 56% higher shareholder returns.
             </p>
 
             <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-              With a Masters degree from New York University and experience
-              scaling 10+ startups from idea to funding, Sudharsan brings a
-              unique blend of academic rigor and startup pragmatism to every
-              project.
+              Every $1 invested in UX delivers $100 in returns (9,900% ROI),
+              while design-centric companies outperformed the S&P 500 by 211%
+              over 10 years.
             </p>
 
             <div>
               <h4 className="text-foreground text-lg font-semibold mb-2">
-                Background:
+                Brand Design Impact:
               </h4>
               <ul className="text-muted-foreground text-base md:text-lg space-y-1 list-disc ml-5">
-                <li>🎓 Masters in Computer Science, NYU</li>
-                <li>🚀 10+ startups scaled as technical advisor</li>
+                <li>🎯 75% of consumers recognize a brand by its logo alone</li>
+                <li>📈 Consistent brand use increases revenue by 23%</li>
                 <li>
-                  💻 Full-stack expertise across modern and legacy systems
+                  💰 68% of businesses report 10-20% revenue growth from brand
+                  consistency
                 </li>
-                <li>🏗️ Specialist in HIPAA/SOC2 compliant architectures</li>
                 <li>
-                  🌍 Global experience with US, European, and Asian markets
+                  🔄 Customers need 7+ brand touchpoints before purchasing
                 </li>
+                <li>🚀 $11M profit increases on large innovation projects</li>
               </ul>
             </div>
 
             <div>
               <h4 className="text-foreground text-lg font-semibold mb-2">
-                Philosophy:
+                Leadership & Expertise:
               </h4>
+              <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-3">
+                Sudharsan (Sudu) Ananth is the visionary behind Sparkfolio,
+                combining creativity, technology, and business strategy to help
+                startups, SMBs, and enterprises turn ideas into successful
+                stories. He has guided more than 10 startups from idea to
+                launch, bridging the gap between what businesses struggle with
+                and the solutions they need.
+              </p>
               <p className="text-muted-foreground text-base md:text-lg italic leading-relaxed">
-                "Every startup deserves enterprise-quality technology
-                leadership. By combining fractional CTO services with an
-                integrated team, we make that possible at a price that doesn't
-                require venture funding to afford."
+                "Design isn't just about how something looks — it's about how it
+                helps your business grow. Every idea becomes a clear and
+                powerful brand that makes an impact."
               </p>
             </div>
 
             <p className="text-primary text-lg font-semibold">
-              Connect:{" "}
+              Ready to transform your brand?{" "}
               <a
                 href="mailto:sudu@sparkfolio.dev"
                 className="underline hover:text-primary/80 transition-colors"
@@ -80,7 +88,7 @@ export function FounderSection() {
               </a>{" "}
               |{" "}
               <a
-                href="https://www.linkedin.com/in/sudarsan-ananth/"
+                href="https://www.linkedin.com/in/sudharsan-ananth/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline hover:text-primary/80 transition-colors"
@@ -100,7 +108,7 @@ export function FounderSection() {
           >
             <motion.img
               src="/images/timeline.webp"
-              alt="Sudharsan Ananth"
+              alt="Brand Impact Visualization"
               className="w-full h-200 object-cover rounded-2xl shadow-xl"
               whileHover={{ scale: 1.05, rotate: 1 }}
               transition={{ type: "spring", stiffness: 200 }}
