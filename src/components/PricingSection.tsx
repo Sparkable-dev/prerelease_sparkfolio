@@ -122,7 +122,7 @@ export function PricingSection() {
                     <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
                     <div className="mb-4">
                       <span className="text-4xl font-bold">{plan.price}</span>
-                      <span className="text-muted-foreground">
+                      <span className="text-muted-foreground ml-1 ">
                         {plan.period}
                       </span>
                     </div>
@@ -138,15 +138,16 @@ export function PricingSection() {
                     ))}
                   </ul>
 
-                  <button
-                    className={`w-full py-4 px-6 rounded-2xl font-semibold transition-all duration-300 ${
+                  <a
+                    href="#waitlist"
+                    className={`w-full py-4 px-6 rounded-2xl font-semibold transition-all duration-300 inline-block text-center ${
                       plan.popular
                         ? "bg-gradient-to-r from-chart-1 to-chart-1 text-black hover:shadow-lg hover:shadow-chart-1/30 hover:scale-105"
                         : "bg-card border border-border hover:border-chart-1/30 hover:bg-chart-1/5 text-foreground"
                     }`}
                   >
                     {plan.cta}
-                  </button>
+                  </a>
                 </div>
               </div>
             );

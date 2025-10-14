@@ -6,12 +6,12 @@ export function EmailCollection() {
   return (
     <section
       id="waitlist"
-      className="py-24 bg-gradient-to-br from-primary/5 via-background to-accent/5 relative overflow-hidden"
+      className="py-24  relative overflow-hidden"
     >
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent" />
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-accent/10 to-transparent rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-primary/10 to-transparent rounded-full blur-3xl" />
+      <div className="absolute inset-0 " />
+      <div className="absolute top-0 right-0 w-96 h-96  rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-96 h-96  rounded-full blur-3xl" />
 
       <div className="container mx-auto px-4 relative">
         <div className="max-w-3xl mx-auto text-center">

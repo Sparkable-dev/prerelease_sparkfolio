@@ -1,4 +1,5 @@
 import { Mail, Twitter, Linkedin, Github, Instagram } from "lucide-react";
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -7,13 +8,22 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="md:col-span-2">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                <span className="text-white font-bold text-sm">S</span>
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-lg overflow-hidden bg-background">
+                <Image
+                  src="/images/logo.webp"
+                  alt="SPARKFOLIO Logo"
+                  width={40}
+                  height={40}
+                  className="w-full h-full object-contain"
+                />
               </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-                SPARKFOLIO
-              </span>
+              <div className="flex items-center">
+                <span className="text-primary text-2xl font-inter">Spark</span>
+                <span className="font-bold text-primary text-3xl ml-1 mt-2 font-italianno">
+                  Folio
+                </span>
+              </div>
             </div>
             <p className="text-muted-foreground mb-8 max-w-md leading-relaxed">
               AI-powered brand design platform that helps startups create

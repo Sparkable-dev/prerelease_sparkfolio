@@ -64,14 +64,20 @@ export function AIChatDemo() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <button className="group bg-gradient-to-r from-chart-1 to-chart-1 text-black px-8 py-4 rounded-2xl font-semibold hover:shadow-lg hover:shadow-chart-1/30 transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2">
+              <a
+                href="#waitlist"
+                className="group bg-gradient-to-r from-chart-1 to-chart-1 text-black px-8 py-4 rounded-2xl font-semibold hover:shadow-lg hover:shadow-chart-1/30 transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
+              >
                 Try it Free
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
+              </a>
 
-              <button className="bg-card border border-border text-foreground px-8 py-4 rounded-2xl font-semibold hover:border-chart-1/30 hover:bg-chart-1/5 transition-all duration-300">
+              <a
+                href="#waitlist"
+                className="bg-card border border-border text-foreground px-8 py-4 rounded-2xl font-semibold hover:border-chart-1/30 hover:bg-chart-1/5 transition-all duration-300"
+              >
                 Get Pro
-              </button>
+              </a>
             </div>
 
             {/* Feature List */}
