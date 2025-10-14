@@ -1,6 +1,5 @@
 "use client";
 
-import { ThemeToggle } from "./ThemeToggle";
 import Image from "next/image";
 
 export function Header() {
@@ -9,7 +8,10 @@ export function Header() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center gap-3">
+          <a
+            href="#"
+            className="flex items-center gap-3 hover:opacity-80 transition-opacity"
+          >
             <div className="w-10 h-10 rounded-lg overflow-hidden bg-background">
               <Image
                 src="/images/logo.webp"
@@ -25,28 +27,28 @@ export function Header() {
                 Folio
               </span>
             </div>
-          </div>
+          </a>
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             <a
-              href="#waitlist"
+              href="#features"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               Features
             </a>
-            <a
-              href="#waitlist"
+            {/* <a
+              href="#screenshots"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               Screenshots
             </a>
             <a
-              href="#waitlist"
+              href="#pricing"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               Pricing
-            </a>
+            </a> */}
             <a
               href="#waitlist"
               className="text-muted-foreground hover:text-foreground transition-colors"
@@ -54,9 +56,6 @@ export function Header() {
               Waitlist
             </a>
           </nav>
-
-          {/* Theme Toggle */}
-          <ThemeToggle />
         </div>
       </div>
     </header>

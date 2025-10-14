@@ -15,10 +15,7 @@ const screenshots = [
     id: 1,
     title: "AI Brand Book Generation",
     description: "Complete brand guidelines generated from your input",
-    image: {
-      light: "/images/brandbook.png",
-      dark: "/images/brandbook-dark.png",
-    },
+    image: "/images/brandbook.png",
     alt: "Concept mockup showing AI-generated brand guidelines interface",
     features: [
       "AI-powered analysis",
@@ -30,10 +27,7 @@ const screenshots = [
     id: 2,
     title: "Color Palette & Themes",
     description: "Professional color schemes tailored to your industry",
-    image: {
-      light: "/images/colors.png",
-      dark: "/images/colors-dark.png",
-    },
+    image: "/images/colors.png",
     alt: "Concept mockup showing color palette interface with theme options",
     features: [
       "Industry-specific colors",
@@ -45,10 +39,7 @@ const screenshots = [
     id: 3,
     title: "Website Design Mockups",
     description: "Complete website designs that match your brand",
-    image: {
-      light: "/images/website.png",
-      dark: "/images/website-dark.png",
-    },
+    image: "/images/website.png",
     alt: "Concept mockup showing website design interface",
     features: ["Responsive designs", "Modern layouts", "Brand consistent"],
   },
@@ -56,10 +47,7 @@ const screenshots = [
     id: 4,
     title: "Logo & Brand Assets",
     description: "Professional logos and all brand assets ready to use",
-    image: {
-      light: "/images/brand-assets.png",
-      dark: "/images/brand-assets-dark.png",
-    },
+    image: "/images/brand-assets.png",
     alt: "Concept mockup showing logo design interface with various options",
     features: ["Multiple formats", "Vector graphics", "High resolution"],
   },
@@ -67,28 +55,8 @@ const screenshots = [
 
 export function ProductScreenshots() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [isDark, setIsDark] = useState(false);
   const [isAutoPlaying, setIsAutoPlaying] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
-  useEffect(() => {
-    // Check initial theme
-    const checkTheme = () => {
-      const root = document.documentElement;
-      setIsDark(root.classList.contains("dark"));
-    };
-
-    checkTheme();
-
-    // Watch for theme changes
-    const observer = new MutationObserver(checkTheme);
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["class"],
-    });
-
-    return () => observer.disconnect();
-  }, []);
 
   // Auto-play functionality
   useEffect(() => {
@@ -146,11 +114,7 @@ export function ProductScreenshots() {
             <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-card/50 backdrop-blur-sm border border-border/50 hover:shadow-3xl hover:shadow-primary/10 transition-all duration-500">
               <div className="aspect-video">
                 <Image
-                  src={
-                    isDark
-                      ? screenshots[activeIndex].image.dark
-                      : screenshots[activeIndex].image.light
-                  }
+                  src={screenshots[activeIndex].image}
                   alt={screenshots[activeIndex].alt}
                   width={1200}
                   height={675}

@@ -1,7 +1,17 @@
 "use client";
 
 import { useState } from "react";
-import { Sparkles, Send, Check, ArrowRight, Star } from "lucide-react";
+import { motion } from "framer-motion";
+import {
+  Sparkles,
+  Send,
+  Check,
+  ArrowRight,
+  Star,
+  Palette,
+  Zap,
+  Crown,
+} from "lucide-react";
 
 const chatMessages = [
   {
@@ -27,8 +37,40 @@ const chatMessages = [
 
 const features = ["Theme Preview", "Checkpoint Restoration", "Image Uploads"];
 
+const themePresets = [
+  {
+    id: "modern",
+    name: "Modern",
+    description: "Clean and contemporary design",
+    colors: ["#6366F1", "#8B5CF6", "#F59E0B", "#10B981"],
+    icon: Sparkles,
+  },
+  {
+    id: "minimal",
+    name: "Minimal",
+    description: "Simple and elegant approach",
+    colors: ["#1A1A1A", "#6B7280", "#F3F4F6", "#FFFFFF"],
+    icon: Palette,
+  },
+  {
+    id: "vibrant",
+    name: "Vibrant",
+    description: "Bold and energetic colors",
+    colors: ["#EF4444", "#F59E0B", "#10B981", "#3B82F6"],
+    icon: Zap,
+  },
+  {
+    id: "premium",
+    name: "Premium",
+    description: "Luxury and sophistication",
+    colors: ["#7C3AED", "#F59E0B", "#1F2937", "#F9FAFB"],
+    icon: Crown,
+  },
+];
+
 export function AIChatDemo() {
   const [inputValue, setInputValue] = useState("");
+  const [selectedPreset, setSelectedPreset] = useState("modern");
 
   return (
     <section className="py-24 bg-gradient-to-b from-background to-muted/20 relative overflow-hidden">
@@ -39,7 +81,7 @@ export function AIChatDemo() {
       </div>
 
       <div className="container mx-auto px-4 relative">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left Section - Feature Description */}
           <div className="space-y-8">
             <div>
@@ -91,100 +133,107 @@ export function AIChatDemo() {
                 </div>
               ))}
             </div>
-          </div>
 
-          {/* Right Section - AI Chat Interface */}
-          <div className="relative">
-            <div className="bg-card/50 backdrop-blur-sm rounded-3xl border border-border/50 shadow-2xl overflow-hidden">
-              {/* Chat Header */}
-              <div className="bg-gradient-to-r from-primary/5 to-accent/5 p-6 border-b border-border/50">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-chart-1 to-chart-2 flex items-center justify-center">
-                      <Sparkles className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-foreground">
-                        SPARKFOLIO AI
-                      </h3>
-                      <p className="text-sm text-muted-foreground">
-                        Brand Designer
-                      </p>
-                    </div>
-                  </div>
-                  <div className="bg-muted text-muted-foreground px-3 py-1 rounded-full text-xs font-medium">
-                    Coming Soon
-                  </div>
-                </div>
-              </div>
-
-              {/* Chat Messages */}
-              <div className="p-6 space-y-4 max-h-80 overflow-y-auto">
-                {chatMessages.map((message) => (
-                  <div
-                    key={message.id}
-                    className={`flex ${
-                      message.type === "user" ? "justify-end" : "justify-start"
-                    }`}
-                  >
-                    <div className="flex items-start gap-3 max-w-[80%]">
-                      {message.type === "ai" && (
-                        <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center flex-shrink-0 mt-1">
-                          <span className="text-white text-xs font-bold">
-                            AI
-                          </span>
-                        </div>
-                      )}
-
-                      <div className="space-y-1">
+            {/* Theme Presets */}
+            <div className="mt-12">
+              <h3 className="text-2xl font-bold mb-6 text-foreground">
+                Choose Your Style
+              </h3>
+              <div className="grid grid-cols-2 gap-4">
+                {themePresets.map((preset) => {
+                  const Icon = preset.icon;
+                  return (
+                    <button
+                      key={preset.id}
+                      onClick={() => setSelectedPreset(preset.id)}
+                      className={`group relative p-4 rounded-2xl border transition-all duration-300 ${
+                        selectedPreset === preset.id
+                          ? "border-primary/50 bg-gradient-to-br from-primary/10 to-transparent shadow-lg shadow-primary/10 scale-105"
+                          : "border-border/50 hover:border-primary/30 hover:bg-gradient-to-br hover:from-primary/5 hover:to-transparent hover:scale-102"
+                      }`}
+                    >
+                      <div className="flex items-center gap-3">
                         <div
-                          className={`px-4 py-3 rounded-2xl ${
-                            message.type === "user"
-                              ? "bg-gradient-to-r from-chart-1 to-chart-2 text-white"
-                              : "bg-card border border-border text-foreground"
+                          className={`w-8 h-8 rounded-xl flex items-center justify-center ${
+                            selectedPreset === preset.id
+                              ? "bg-gradient-to-br from-chart-1 to-chart-1"
+                              : "bg-gradient-to-br from-chart-1/20 to-chart-1/20"
                           }`}
                         >
-                          <p className="text-sm leading-relaxed">
-                            {message.message}
+                          <Icon
+                            className={`w-4 h-4 ${
+                              selectedPreset === preset.id
+                                ? "text-white"
+                                : "text-chart-1"
+                            }`}
+                          />
+                        </div>
+                        <div className="text-left">
+                          <h4 className="font-bold text-foreground text-sm">
+                            {preset.name}
+                          </h4>
+                          <p className="text-xs text-muted-foreground">
+                            {preset.description}
                           </p>
                         </div>
-                        <div className="flex items-center gap-2">
-                          {message.type === "user" && (
-                            <div className="w-6 h-6 rounded-full bg-muted flex items-center justify-center">
-                              <span className="text-xs font-bold text-muted-foreground">
-                                U
-                              </span>
-                            </div>
-                          )}
-                          <span className="text-xs text-muted-foreground">
-                            {message.timestamp}
-                          </span>
-                        </div>
                       </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
 
-              {/* Chat Input */}
-              <div className="p-6 border-t border-border/50 bg-muted/20">
-                <div className="flex items-center gap-3">
-                  <input
-                    type="text"
-                    value={inputValue}
-                    onChange={(e) => setInputValue(e.target.value)}
-                    placeholder="Describe your ideal brand theme..."
-                    className="flex-1 px-4 py-3 rounded-xl border border-border bg-background text-foreground placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
-                  />
-                  <button className="p-3 rounded-xl bg-gradient-to-r from-chart-1 to-chart-1 text-white hover:shadow-lg hover:shadow-chart-1/30 transition-all duration-300 hover:scale-105">
-                    <Send className="w-5 h-5" />
-                  </button>
-                </div>
-                <p className="text-xs text-muted-foreground mt-3 text-center">
-                  AI-powered theme generation coming in SPARKFOLIO Pro
-                </p>
+                      {/* Color Palette Preview */}
+                      <div className="flex gap-1 mt-2">
+                        {preset.colors.map((color, index) => (
+                          <div
+                            key={index}
+                            className="w-3 h-3 rounded-full"
+                            style={{ backgroundColor: color }}
+                          />
+                        ))}
+                      </div>
+                    </button>
+                  );
+                })}
               </div>
             </div>
+          </div>
+
+          {/* Right Section - Image and GIF Display */}
+          <div className="relative grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+            {/* Image Section */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative"
+            >
+              <div className="backdrop-blur-sm rounded-xl  overflow-hidden h-[800px]">
+                <div className="h-full">
+                  <img
+                    src="/images/aichat.png"
+                    alt="AI Theme Generation Preview"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
+            </motion.div>
+
+            {/* GIF Section */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative"
+            >
+              <div className="backdrop-blur-sm rounded-xl mt-[-5] overflow-hidden w-full h-[800px]">
+                <div className="h-full">
+                  <img
+                    src="/images/gif.gif"
+                    alt="AI Generation Process"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>

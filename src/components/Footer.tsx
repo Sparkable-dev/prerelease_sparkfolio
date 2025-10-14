@@ -73,7 +73,7 @@ export function Footer() {
                   Features
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a
                   href="#screenshots"
                   className="hover:text-foreground transition-colors duration-300"
@@ -88,7 +88,7 @@ export function Footer() {
                 >
                   Pricing
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a
                   href="#waitlist"
@@ -130,7 +130,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="/contact"
+                  href="#waitlist"
                   className="hover:text-foreground transition-colors duration-300"
                 >
                   Contact

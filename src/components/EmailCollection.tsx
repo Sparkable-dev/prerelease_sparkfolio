@@ -4,10 +4,7 @@ import { BrevoForm } from "./BrevoForm";
 
 export function EmailCollection() {
   return (
-    <section
-      id="waitlist"
-      className="py-24  relative overflow-hidden"
-    >
+    <section id="waitlist" className="py-24  relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 " />
       <div className="absolute top-0 right-0 w-96 h-96  rounded-full blur-3xl" />
@@ -28,7 +25,7 @@ export function EmailCollection() {
             launches.
           </p>
 
-          <div className="bg-card/50 backdrop-blur-sm rounded-3xl p-10 shadow-2xl border border-border/50 relative">
+          <div className=" backdrop-blur-sm rounded-3xl p-10 shadow-2xl  relative">
             <div className="absolute inset-0 rounded-3xl  " />
             <div className="relative">
               {/* Brevo Form Embed */}
