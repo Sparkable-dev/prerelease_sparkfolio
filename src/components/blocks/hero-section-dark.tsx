@@ -509,8 +509,8 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
       className,
       title = "SPARKFOLIO",
       subtitle = {
-        regular: "Designing your projects faster with ",
-        gradient: "the largest figma UI kit.",
+        regular: "",
+        gradient: "",
       },
       description = "Sed ut perspiciatis unde omnis iste natus voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.",
       ctaText = "Browse courses",
@@ -535,25 +535,12 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
                   <ChevronRight className="inline w-4 h-4 ml-2 group-hover:translate-x-1 duration-300" />
                 </h1>
                 <h2 className="text-4xl tracking-tighter font-geist bg-clip-text text-transparent md:text-6xl bg-[linear-gradient(180deg,_#000_0%,_rgba(0,_0,_0,_0.75)_100%)]">
-                  {subtitle.regular}
+                  {subtitle.regular}{" "}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6366F1] to-[#8B5CF6]">
                     {subtitle.gradient}
                   </span>
                 </h2>
                 <p className="max-w-2xl text-gray-600">{description}</p>
-                <div className="items-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
-                  <span className="relative inline-block overflow-hidden rounded-full p-[1.5px]">
-                    <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FBAB20_0%,#4D5CD7_50%,#FBAB20_100%)]" />
-                    <div className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-white text-xs font-medium backdrop-blur-3xl">
-                      <a
-                        href={ctaHref}
-                        className="inline-flex rounded-full text-center group items-center w-full justify-center text-black text-xl btn-primary transition-all sm:w-auto py-4 px-10"
-                      >
-                        {ctaText}
-                      </a>
-                    </div>
-                  </span>
-                </div>
               </div>
 
               {/* Right side - Brevo Form */}

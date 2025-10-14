@@ -7,7 +7,7 @@ interface BrevoFormProps {
 export function BrevoForm({ className }: BrevoFormProps) {
   // Light form URL only
   const formUrl =
-    "https://44603cd0.sibforms.com/serve/MUIFAOJruId_6A090I0rt4wPhI-g4Hk61F48wANxhuh2zFo30Xdjzyiyg42fr9UCPtnc99CW5oTzSlGqHHcEKM4tCfCBaIfv82m1Lnc4KMAlpX9sph0XTV-wWERXkXFT0UjDQXzBFg70IursCvJJCFawkey3dV2SgsJXw37C70TmN-qLlm3_PmU_2BEx8crXb7kTIkAunpUwq-Nf";
+    "https://44603cd0.sibforms.com/serve/MUIFABoKEvv6R402tIYwDN7CAVDprA6KkdTRUwF7yCOkpXxPL3E51TEu_833RrheCSOFk6Rc9PXNU3pWF9HlGIJA33fMgEohZPr7FKDJoJUQT6IcXY5m1V_L4z6pUcWryrew06HWYWqUUb9ilni_WA-h8uMKMGGtFm13NU6wp0gHL4F3Ft9jiQnB0U7vh7CpfBMNiO8gnhlERLNs";
 
   return (
     <div className={className}>
