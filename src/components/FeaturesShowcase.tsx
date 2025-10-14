@@ -54,7 +54,7 @@ export function FeaturesShowcase() {
             <span>Powerful Features</span>
           </div>
           <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-            Everything You'll Need to Launch
+            Everything You&apos;ll Need to Launch
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             From concept to execution, SPARKFOLIO will provide all the tools and
@@ -92,7 +92,7 @@ export function FeaturesShowcase() {
         <div className="text-center">
           <div className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-chart-1 to-chart-1 text-black font-semibold mb-8 shadow-lg  transition-all duration-300 ">
             <Zap className="w-5 h-5" />
-            <span>Ready to transform your startup's brand?</span>
+            <span>Ready to transform your startup&apos;s brand?</span>
           </div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Join thousands of entrepreneurs who are excited about the future of

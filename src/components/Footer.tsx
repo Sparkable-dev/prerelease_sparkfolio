@@ -1,4 +1,4 @@
-import { Mail, Twitter, Linkedin, Github, Instagram } from "lucide-react";
+import { Mail, Linkedin, Github, Instagram } from "lucide-react";
 import Image from "next/image";
 
 export function Footer() {

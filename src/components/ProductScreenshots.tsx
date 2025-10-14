@@ -99,7 +99,7 @@ export function ProductScreenshots() {
             <span>Product Preview</span>
           </div>
           <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-            See What's Coming
+            See What&apos;s Coming
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Preview how our AI will transform your startup ideas into complete

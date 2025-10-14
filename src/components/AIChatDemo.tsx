@@ -4,7 +4,6 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   Sparkles,
-  Send,
   Check,
   ArrowRight,
   Star,
@@ -13,27 +12,27 @@ import {
   Crown,
 } from "lucide-react";
 
-const chatMessages = [
-  {
-    id: 1,
-    type: "user",
-    message: "Create a modern purple theme for my startup",
-    timestamp: "2 min ago",
-  },
-  {
-    id: 2,
-    type: "ai",
-    message:
-      "I've created a beautiful modern purple theme with great contrast and professional appeal. The primary color uses a vibrant purple (#8B5CF6) with complementary accent colors.",
-    timestamp: "2 min ago",
-  },
-  {
-    id: 3,
-    type: "user",
-    message: "Make it more accessible",
-    timestamp: "1 min ago",
-  },
-];
+// const chatMessages = [
+//   {
+//     id: 1,
+//     type: "user",
+//     message: "Create a modern purple theme for my startup",
+//     timestamp: "2 min ago",
+//   },
+//   {
+//     id: 2,
+//     type: "ai",
+//     message:
+//       "I've created a beautiful modern purple theme with great contrast and professional appeal. The primary color uses a vibrant purple (#8B5CF6) with complementary accent colors.",
+//     timestamp: "2 min ago",
+//   },
+//   {
+//     id: 3,
+//     type: "user",
+//     message: "Make it more accessible",
+//     timestamp: "1 min ago",
+//   },
+// ];
 
 const features = ["Theme Preview", "Checkpoint Restoration", "Image Uploads"];
 
@@ -69,7 +68,7 @@ const themePresets = [
 ];
 
 export function AIChatDemo() {
-  const [inputValue, setInputValue] = useState("");
+  // const [inputValue, setInputValue] = useState("");
   const [selectedPreset, setSelectedPreset] = useState("modern");
 
   return (

@@ -31,8 +31,8 @@ export function FounderSection() {
               ROI & Revenue Growth
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground font-medium">
-              McKinsey's analysis reveals design-forward businesses achieve 32%
-              higher revenue growth and 56% higher shareholder returns.
+              McKinsey&apos;s analysis reveals design-forward businesses achieve
+              32% higher revenue growth and 56% higher shareholder returns.
             </p>
 
             <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
@@ -72,9 +72,9 @@ export function FounderSection() {
                 and the solutions they need.
               </p>
               <p className="text-muted-foreground text-base md:text-lg italic leading-relaxed">
-                "Design isn't just about how something looks — it's about how it
-                helps your business grow. Every idea becomes a clear and
-                powerful brand that makes an impact."
+                &quot;Design isn&apos;t just about how something looks —
+                it&apos;s about how it helps your business grow. Every idea
+                becomes a clear and powerful brand that makes an impact.&quot;
               </p>
             </div>
 
