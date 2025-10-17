@@ -12,28 +12,6 @@ import {
   Crown,
 } from "lucide-react";
 
-// const chatMessages = [
-//   {
-//     id: 1,
-//     type: "user",
-//     message: "Create a modern purple theme for my startup",
-//     timestamp: "2 min ago",
-//   },
-//   {
-//     id: 2,
-//     type: "ai",
-//     message:
-//       "I've created a beautiful modern purple theme with great contrast and professional appeal. The primary color uses a vibrant purple (#8B5CF6) with complementary accent colors.",
-//     timestamp: "2 min ago",
-//   },
-//   {
-//     id: 3,
-//     type: "user",
-//     message: "Make it more accessible",
-//     timestamp: "1 min ago",
-//   },
-// ];
-
 const features = ["Theme Preview", "Checkpoint Restoration", "Image Uploads"];
 
 const themePresets = [
@@ -69,7 +47,6 @@ const themePresets = [
 
 export function AIChatDemo() {
   // const [inputValue, setInputValue] = useState("");
-  const [selectedPreset, setSelectedPreset] = useState("modern");
 
   return (
     <section className="py-24 bg-gradient-to-b from-background to-muted/20 relative overflow-hidden">
@@ -84,11 +61,6 @@ export function AIChatDemo() {
           {/* Left Section - Feature Description */}
           <div className="space-y-8">
             <div>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-chart-1/10 to-chart-1/5 text-chart-1 text-sm font-medium mb-6">
-                <Star className="w-4 h-4" />
-                <span>Pro Features</span>
-              </div>
-
               <h2 className="text-5xl md:text-6xl font-bold mb-8 leading-tight">
                 Generate Themes With{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-chart-1 to-chart-2 border-2 border-dashed border-chart-1/30 px-2 py-1 rounded-lg">
@@ -107,65 +79,33 @@ export function AIChatDemo() {
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <a
                 href="#waitlist"
-                className="group bg-gradient-to-r from-chart-1 to-chart-1 text-black px-8 py-4 rounded-2xl font-semibold hover:shadow-lg hover:shadow-chart-1/30 transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
+                className="group bg-yellow-500 text-black px-8 py-4 rounded-2xl font-semibold hover:shadow-lg hover:shadow-chart-1/30 transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
               >
                 Try it Free
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
-
-              <a
-                href="#waitlist"
-                className="bg-card border border-border text-foreground px-8 py-4 rounded-2xl font-semibold hover:border-chart-1/30 hover:bg-chart-1/5 transition-all duration-300"
-              >
-                Get Pro
-              </a>
             </div>
-
-            {/* Feature List */}
-            <div className="flex flex-wrap gap-6">
-              {features.map((feature, index) => (
-                <div key={index} className="flex items-center gap-2">
-                  <Check className="w-5 h-5 text-chart-4" />
-                  <span className="text-muted-foreground font-medium">
-                    {feature}
-                  </span>
-                </div>
-              ))}
-            </div>
-
-            {/* Theme Presets */}
+            {/* Theme Showcase */}
             <div className="mt-12">
-              <h3 className="text-2xl font-bold mb-6 text-foreground">
-                Choose Your Style
-              </h3>
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="text-2xl font-bold text-foreground">
+                  Available Themes
+                </h3>
+                <span className="text-sm text-muted-foreground bg-muted/50 px-3 py-1 rounded-full">
+                  +50 more themes
+                </span>
+              </div>
               <div className="grid grid-cols-2 gap-4">
                 {themePresets.map((preset) => {
                   const Icon = preset.icon;
                   return (
-                    <button
+                    <div
                       key={preset.id}
-                      onClick={() => setSelectedPreset(preset.id)}
-                      className={`group relative p-4 rounded-2xl border transition-all duration-300 ${
-                        selectedPreset === preset.id
-                          ? "border-primary/50 bg-gradient-to-br from-primary/10 to-transparent shadow-lg shadow-primary/10 scale-105"
-                          : "border-border/50 hover:border-primary/30 hover:bg-gradient-to-br hover:from-primary/5 hover:to-transparent hover:scale-102"
-                      }`}
+                      className="group relative p-4 rounded-2xl border border-border/30 bg-gradient-to-br from-card/50 to-transparent "
                     >
                       <div className="flex items-center gap-3">
-                        <div
-                          className={`w-8 h-8 rounded-xl flex items-center justify-center ${
-                            selectedPreset === preset.id
-                              ? "bg-gradient-to-br from-chart-1 to-chart-1"
-                              : "bg-gradient-to-br from-chart-1/20 to-chart-1/20"
-                          }`}
-                        >
-                          <Icon
-                            className={`w-4 h-4 ${
-                              selectedPreset === preset.id
-                                ? "text-white"
-                                : "text-chart-1"
-                            }`}
-                          />
+                        <div className="w-8 h-8 rounded-xl flex items-center justify-center bg-gradient-to-br from-chart-1/20 to-chart-1/20">
+                          <Icon className="w-4 h-4 text-chart-1" />
                         </div>
                         <div className="text-left">
                           <h4 className="font-bold text-foreground text-sm">
@@ -187,9 +127,14 @@ export function AIChatDemo() {
                           />
                         ))}
                       </div>
-                    </button>
+                    </div>
                   );
                 })}
+              </div>
+              <div className="mt-4 text-center">
+                <p className="text-sm text-muted-foreground">
+                  And many more themes available in the app
+                </p>
               </div>
             </div>
           </div>
