@@ -96,7 +96,7 @@ export function HeroSection() {
               <div className="text-center sm:mx-auto lg:mr-auto lg:mt-0">
                 <AnimatedGroup variants={transitionVariants}>
                   <h1 className="mt-4 max-w-4xl mx-auto text-balance text-5xl md:text-6xl lg:mt-8 xl:text-7xl font-inter font-bold">
-                    Don't spend{" "}
+                    Don&apos;t spend{" "}
                     <span className="text-red-500 line-through">$2000</span> for
                     brand kit — get{" "}
                     <span className="text-purple-500">tailored brand kit</span>{" "}
@@ -112,11 +112,11 @@ export function HeroSection() {
                   <div className="mt-12 flex flex-col items-center justify-center gap-4">
                     <div className="w-full max-w-md p-6 rounded-xl bg-green-50 border border-green-200 text-center">
                       <div className="text-green-600 font-semibold mb-2">
-                        🎉 You're all set!
+                        🎉 You&apos;re all set!
                       </div>
                       <p className="text-green-700 text-sm">
-                        Thanks for joining our waitlist! We'll contact you soon
-                        with updates about SparkFolio's launch.
+                        Thanks for joining our waitlist! We&apos;ll contact you
+                        soon with updates about SparkFolio&apos;s launch.
                       </p>
                     </div>
                   </div>

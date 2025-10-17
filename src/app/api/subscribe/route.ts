@@ -1,8 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function POST(request: NextRequest) {
+  let email: string = '';
+  
   try {
-    const { email, name, listId } = await request.json();
+    const requestData = await request.json();
+    email = requestData.email || '';
+    const { name, listId } = requestData;
 
     if (!email) {
       return NextResponse.json(
@@ -96,7 +100,7 @@ export async function POST(request: NextRequest) {
       { 
         success: true, 
         message: 'Thanks for joining! We\'ll contact you soon.',
-        subscription: { email, alreadyExists: true }
+        subscription: { email: email || 'unknown', alreadyExists: true }
       },
       { status: 200 }
     );

@@ -58,8 +58,8 @@ export function SpectacularWaitingListCTA() {
             className="text-xl text-muted-foreground mb-12 leading-relaxed max-w-2xl mx-auto font-inter"
           >
             Be among the first to experience the future of brand design. Join
-            our exclusive waitlist and we'll contact you soon with early access
-            when SparkFolio launches.
+            our exclusive waitlist and we&apos;ll contact you soon with early
+            access when SparkFolio launches.
           </motion.p>
 
           {/* Spectacular CTA Card */}

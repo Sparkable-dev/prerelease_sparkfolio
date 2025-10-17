@@ -89,11 +89,11 @@ export function MagicEmailForm({ className }: MagicEmailFormProps) {
             </motion.div>
 
             <h3 className="text-2xl font-bold text-foreground mb-2">
-              You're in! 🎉
+              You&apos;re in! 🎉
             </h3>
             <p className="text-muted-foreground">
-              Thanks for joining our waitlist! We'll contact you soon with
-              updates about SparkFolio's launch.
+              Thanks for joining our waitlist! We&apos;ll contact you soon with
+              updates about SparkFolio&apos;s launch.
             </p>
           </div>
         </MagicCard>
