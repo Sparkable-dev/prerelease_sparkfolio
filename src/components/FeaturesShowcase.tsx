@@ -46,17 +46,17 @@ export function FeaturesShowcase() {
   return (
     <section
       id="features"
-      className="py-24 bg-gradient-to-b from-background to-muted/30"
+      className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-b from-background to-muted/30"
     >
       <div className="container mx-auto px-4">
-        <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-bold mb-8 leading-tight font-inter">
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 leading-tight font-inter">
             Everything You&apos;ll Need to{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-chart-1 to-chart-2 border-2 border-dashed border-chart-1/30 px-2 py-1 rounded-lg">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-chart-1 to-chart-2 border-2 border-dashed border-chart-1/30 px-1 sm:px-2 py-1 rounded-lg">
               Launch
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-inter">
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-inter px-2 sm:px-0">
             From concept to execution, SparkFolio will provide all the tools and
             assets your startup needs to establish a professional brand
             presence.
@@ -64,7 +64,7 @@ export function FeaturesShowcase() {
         </div>
 
         {/* Bento Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-12 sm:mb-16 lg:mb-20">
           {features.map((feature, index) => {
             const Icon = feature.icon;
 
@@ -72,13 +72,13 @@ export function FeaturesShowcase() {
             const getCardLayout = (index: number) => {
               switch (index) {
                 case 0: // AI-Powered Generation - Large featured card
-                  return "md:col-span-2 lg:col-span-3 md:row-span-2";
+                  return "md:col-span-2 lg:col-span-2";
                 case 1: // Smart Color Palettes - Medium card
                   return "md:col-span-2 lg:col-span-2";
                 case 2: // Website Design Mockups - Medium card
-                  return "md:col-span-2 lg:col-span-1";
+                  return "md:col-span-2 lg:col-span-2";
                 case 3: // Complete Brand Books - Wide card
-                  return "md:col-span-2 lg:col-span-3";
+                  return "md:col-span-2 lg:col-span-2";
                 case 4: // Lightning Fast - Small card
                   return "md:col-span-1 lg:col-span-1";
                 case 5: // Industry Expertise - Small card
@@ -110,22 +110,30 @@ export function FeaturesShowcase() {
                 />
                 <div
                   className={`relative ${
-                    isLarge ? "p-10" : isWide ? "p-8" : "p-6"
+                    isLarge
+                      ? "p-6 sm:p-8 lg:p-10"
+                      : isWide
+                      ? "p-4 sm:p-6 lg:p-8"
+                      : "p-4 sm:p-6"
                   } h-full flex flex-col`}
                 >
                   {/* Icon */}
                   <div
                     className={`${
                       isLarge
-                        ? "w-16 h-16 mb-8"
+                        ? "w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 mb-4 sm:mb-6 lg:mb-8"
                         : isWide
-                        ? "w-14 h-14 mb-6"
-                        : "w-12 h-12 mb-4"
+                        ? "w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 mb-3 sm:mb-4 lg:mb-6"
+                        : "w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mb-3 sm:mb-4"
                     } rounded-2xl bg-gradient-to-br from-blue-50 to-purple-50 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg`}
                   >
                     <Icon
                       className={`${
-                        isLarge ? "w-8 h-8" : isWide ? "w-7 h-7" : "w-6 h-6"
+                        isLarge
+                          ? "w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8"
+                          : isWide
+                          ? "w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7"
+                          : "w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6"
                       } text-blue-600`}
                     />
                   </div>
@@ -134,14 +142,22 @@ export function FeaturesShowcase() {
                   <div className="flex-1 flex flex-col">
                     <h3
                       className={`${
-                        isLarge ? "text-2xl" : isWide ? "text-xl" : "text-lg"
-                      } font-bold mb-3 text-gray-900 group-hover:text-gray-800 transition-colors duration-300 font-inter`}
+                        isLarge
+                          ? "text-lg sm:text-xl lg:text-2xl"
+                          : isWide
+                          ? "text-base sm:text-lg lg:text-xl"
+                          : "text-sm sm:text-base lg:text-lg"
+                      } font-bold mb-2 sm:mb-3 text-gray-900 group-hover:text-gray-800 transition-colors duration-300 font-inter`}
                     >
                       {feature.title}
                     </h3>
                     <p
                       className={`${
-                        isLarge ? "text-base" : isWide ? "text-sm" : "text-xs"
+                        isLarge
+                          ? "text-sm sm:text-base"
+                          : isWide
+                          ? "text-xs sm:text-sm lg:text-base"
+                          : "text-xs sm:text-sm"
                       } text-gray-600 leading-relaxed flex-1 font-inter`}
                     >
                       {feature.description}
@@ -149,7 +165,7 @@ export function FeaturesShowcase() {
 
                     {/* Accent line for larger cards */}
                     {(isLarge || isWide) && (
-                      <div className="mt-4 h-1 w-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300" />
+                      <div className="mt-3 sm:mt-4 h-1 w-8 sm:w-10 lg:w-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300" />
                     )}
                   </div>
                 </div>
@@ -159,8 +175,8 @@ export function FeaturesShowcase() {
         </div>
 
         {/* Developer Credit */}
-        <div className="mt-20 pt-12">
-          <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground/60">
+        <div className="mt-12 sm:mt-16 lg:mt-20 pt-8 sm:pt-12">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 text-xs text-muted-foreground/60 px-4 sm:px-0">
             <span>Powered by</span>
             <a
               href="https://sparkable.dev"
@@ -171,10 +187,10 @@ export function FeaturesShowcase() {
               <span className="group-hover:scale-105 transition-transform duration-300 font-inter">
                 Sparkable Digital Solutions
               </span>
-              <span className="text-muted-foreground/40 group-hover:text-chart-1/60 transition-colors duration-300">
+              <span className="text-muted-foreground/40 group-hover:text-chart-1/60 transition-colors duration-300 hidden sm:inline">
                 •
               </span>
-              <span className="text-muted-foreground/60 group-hover:text-muted-foreground/80 transition-colors duration-300 font-inter">
+              <span className="text-muted-foreground/60 group-hover:text-muted-foreground/80 transition-colors duration-300 font-inter text-center sm:text-left">
                 startup launch pad for success
               </span>
             </a>

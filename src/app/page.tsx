@@ -11,7 +11,7 @@ import { Footer } from "@/components/ui/modem-animated-footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       <section id="hero">
         <HeroSection />
       </section>

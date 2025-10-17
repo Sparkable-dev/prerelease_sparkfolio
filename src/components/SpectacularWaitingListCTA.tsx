@@ -13,7 +13,10 @@ export function SpectacularWaitingListCTA() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <section id="waitlist" className="py-24 relative overflow-hidden">
+    <section
+      id="waitlist"
+      className="py-12 sm:py-16 md:py-20 lg:py-24 relative overflow-hidden"
+    >
       {/* Animated background particles */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary/20 rounded-full animate-pulse" />
@@ -23,8 +26,8 @@ export function SpectacularWaitingListCTA() {
       </div>
 
       {/* Gradient backgrounds */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-primary/10 via-accent/5 to-transparent rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-accent/10 via-primary/5 to-transparent rounded-full blur-3xl" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-primary/10 via-accent/5 to-transparent rounded-full blur-3xl hidden lg:block" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-accent/10 via-primary/5 to-transparent rounded-full blur-3xl hidden lg:block" />
 
       <div className="container mx-auto px-4 relative">
         <div className="max-w-4xl mx-auto text-center">
@@ -33,7 +36,7 @@ export function SpectacularWaitingListCTA() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-6xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-foreground via-primary to-accent bg-clip-text text-transparent font-inter"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 sm:mb-8 bg-gradient-to-r from-foreground via-primary to-accent bg-clip-text text-transparent font-inter px-4 sm:px-0"
           >
             Join the{" "}
             <motion.span
@@ -55,7 +58,7 @@ export function SpectacularWaitingListCTA() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl text-muted-foreground mb-12 leading-relaxed max-w-2xl mx-auto font-inter"
+            className="text-base sm:text-lg lg:text-xl text-muted-foreground mb-8 sm:mb-12 leading-relaxed max-w-2xl mx-auto font-inter px-4 sm:px-0"
           >
             Be among the first to experience the future of brand design. Join
             our exclusive waitlist and we&apos;ll contact you soon with early
@@ -96,7 +99,7 @@ export function SpectacularWaitingListCTA() {
                 className="rounded-3xl"
               />
 
-              <div className="relative p-12">
+              <div className="relative p-6 sm:p-8 lg:p-12">
                 {/* Animated background pattern */}
                 <div className="absolute inset-0 opacity-10">
                   <div className="absolute top-4 left-4 w-8 h-8 border border-primary/20 rounded-full animate-spin" />
@@ -111,12 +114,12 @@ export function SpectacularWaitingListCTA() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.8 }}
-                    className="text-center mb-8"
+                    className="text-center mb-6 sm:mb-8"
                   >
-                    <h3 className="text-3xl font-bold mb-4 bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent font-inter">
+                    <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4 bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent font-inter">
                       Get Early Access
                     </h3>
-                    <p className="text-muted-foreground font-inter">
+                    <p className="text-sm sm:text-base text-muted-foreground font-inter">
                       Join 2,500+ entrepreneurs already on the waitlist
                     </p>
                   </motion.div>
@@ -136,42 +139,42 @@ export function SpectacularWaitingListCTA() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 1.2 }}
-                    className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto"
+                    className="mt-8 sm:mt-12 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-2xl mx-auto"
                   >
                     <motion.div
                       whileHover={{ scale: 1.05 }}
-                      className="flex flex-col items-center p-4 rounded-xl bg-background/50 backdrop-blur-sm border border-primary/10"
+                      className="flex flex-col items-center p-3 sm:p-4 rounded-xl bg-background/50 backdrop-blur-sm border border-primary/10"
                     >
                       <motion.div
                         animate={{ rotate: [0, 10, -10, 0] }}
                         transition={{ duration: 2, repeat: Infinity }}
-                        className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-3"
+                        className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 flex items-center justify-center mb-2 sm:mb-3"
                       >
-                        <Users className="w-6 h-6 text-primary" />
+                        <Users className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                       </motion.div>
-                      <div className="text-2xl font-bold text-foreground font-inter">
+                      <div className="text-lg sm:text-xl lg:text-2xl font-bold text-foreground font-inter">
                         2,500+
                       </div>
-                      <div className="text-sm text-muted-foreground font-inter">
+                      <div className="text-xs sm:text-sm text-muted-foreground font-inter">
                         Entrepreneurs
                       </div>
                     </motion.div>
 
                     <motion.div
                       whileHover={{ scale: 1.05 }}
-                      className="flex flex-col items-center p-4 rounded-xl bg-background/50 backdrop-blur-sm border border-accent/10"
+                      className="flex flex-col items-center p-3 sm:p-4 rounded-xl bg-background/50 backdrop-blur-sm border border-accent/10"
                     >
                       <motion.div
                         animate={{ scale: [1, 1.1, 1] }}
                         transition={{ duration: 1.5, repeat: Infinity }}
-                        className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mb-3"
+                        className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-accent/10 flex items-center justify-center mb-2 sm:mb-3"
                       >
-                        <Zap className="w-6 h-6 text-accent" />
+                        <Zap className="w-5 h-5 sm:w-6 sm:h-6 text-accent" />
                       </motion.div>
-                      <div className="text-2xl font-bold text-foreground font-inter">
+                      <div className="text-lg sm:text-xl lg:text-2xl font-bold text-foreground font-inter">
                         Early
                       </div>
-                      <div className="text-sm text-muted-foreground font-inter">
+                      <div className="text-xs sm:text-sm text-muted-foreground font-inter">
                         Access
                       </div>
                     </motion.div>

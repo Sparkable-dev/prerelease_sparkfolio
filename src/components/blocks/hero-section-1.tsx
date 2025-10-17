@@ -106,14 +106,14 @@ export function HeroSection() {
             <div className="mx-auto max-w-7xl px-6">
               <div className="text-center sm:mx-auto lg:mr-auto lg:mt-0">
                 <AnimatedGroup variants={transitionVariants}>
-                  <h1 className="mt-4 max-w-4xl mx-auto text-balance text-5xl md:text-6xl lg:mt-8 xl:text-7xl font-inter font-bold">
+                  <h1 className="mt-4 max-w-4xl mx-auto text-balance text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-inter font-bold">
                     Don&apos;t spend{" "}
                     <span className="text-red-500 line-through">$2000</span> for
                     brand kit — get{" "}
                     <span className="text-purple-500">tailored brand kit</span>{" "}
                     with <span className="text-purple-500">AI</span> ✨
                   </h1>
-                  <p className="mx-auto mt-8 max-w-2xl text-balance text-base font-inter">
+                  <p className="mx-auto mt-6 sm:mt-8 max-w-2xl text-balance text-sm sm:text-base font-inter px-4 sm:px-0">
                     Create professional brand assets in minutes with our
                     AI-powered design tools.
                   </p>
@@ -134,7 +134,7 @@ export function HeroSection() {
                 ) : (
                   <form
                     onSubmit={handleEmailSubmit}
-                    className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-2"
+                    className="mt-8 sm:mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-2 px-4 sm:px-0"
                   >
                     <div className="relative w-full max-w-md">
                       <input
@@ -143,13 +143,13 @@ export function HeroSection() {
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="Enter your email address"
                         required
-                        className="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 pr-32 text-gray-900 placeholder-gray-500 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500/20 dark:border-gray-600"
+                        className="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 pr-32 text-gray-900 placeholder-gray-500 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500/20 dark:border-gray-600 text-sm sm:text-base"
                       />
                     </div>
                     <ShimmerButton
                       type="submit"
                       disabled={!email || isLoading}
-                      className="w-full sm:w-auto text-lg font-semibold px-8 py-4 disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="w-full sm:w-auto text-sm sm:text-lg font-semibold px-6 sm:px-8 py-3 sm:py-4 disabled:opacity-50 disabled:cursor-not-allowed"
                       shimmerColor="#ffffff"
                       background="linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #F59E0B 100%)"
                       borderRadius="12px"
@@ -187,21 +187,21 @@ export function HeroSection() {
                 ...transitionVariants,
               }}
             >
-              <div className="relative -mr-56 mt-4 overflow-hidden px-2 sm:mr-0 sm:mt-6 md:mt-8">
+              <div className="relative -mr-0 sm:mr-0 mt-4 overflow-hidden px-2 sm:mt-6 md:mt-8">
                 <div
                   aria-hidden
                   className="bg-gradient-to-b to-background absolute inset-0 z-10 from-transparent from-35%"
                 />
-                <div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-6xl overflow-hidden rounded-2xl border p-4 shadow-lg shadow-zinc-950/15 ring-1">
+                <div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-6xl overflow-hidden rounded-2xl border p-2 sm:p-4 shadow-lg shadow-zinc-950/15 ring-1">
                   <img
-                    className="bg-background aspect-15/8 relative hidden rounded-2xl dark:block"
+                    className="bg-background aspect-15/8 relative hidden rounded-2xl dark:block w-full h-auto"
                     src="/images/landing-white.png"
                     alt="app screen"
                     width="2700"
                     height="1440"
                   />
                   <img
-                    className="z-2 border-border/25 aspect-15/8 relative rounded-2xl border dark:hidden"
+                    className="z-2 border-border/25 aspect-15/8 relative rounded-2xl border dark:hidden w-full h-auto"
                     src="/images/landing-white.png"
                     alt="app screen"
                     width="2700"
@@ -242,7 +242,7 @@ const HeroHeader = () => {
       >
         <div
           className={cn(
-            "mx-auto mt-2 max-w-6xl px-6 transition-all duration-300 lg:px-12",
+            "mx-auto mt-2 max-w-6xl px-4 sm:px-6 transition-all duration-300 lg:px-12",
             isScrolled &&
               "bg-background/50 max-w-4xl rounded-2xl border backdrop-blur-lg lg:px-5"
           )}
@@ -282,9 +282,9 @@ const HeroHeader = () => {
               </ul>
             </div>
 
-            <div className="bg-background group-data-[state=active]:block lg:group-data-[state=active]:flex mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent">
+            <div className="bg-background group-data-[state=active]:block lg:group-data-[state=active]:flex mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border p-4 sm:p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent">
               <div className="lg:hidden">
-                <ul className="space-y-6 text-base">
+                <ul className="space-y-4 sm:space-y-6 text-sm sm:text-base">
                   {menuItems.map((item, index) => (
                     <li key={index}>
                       <Link
@@ -302,7 +302,7 @@ const HeroHeader = () => {
                   <ShimmerButton
                     className={cn(
                       isScrolled && "lg:hidden",
-                      "text-sm font-semibold px-4 py-2"
+                      "text-xs sm:text-sm font-semibold px-3 sm:px-4 py-2"
                     )}
                     shimmerColor="#ffffff"
                     background="linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #F59E0B 100%)"
@@ -316,7 +316,7 @@ const HeroHeader = () => {
                   <ShimmerButton
                     className={cn(
                       isScrolled ? "lg:inline-flex" : "hidden",
-                      "text-sm font-semibold px-4 py-2"
+                      "text-xs sm:text-sm font-semibold px-3 sm:px-4 py-2"
                     )}
                     shimmerColor="#ffffff"
                     background="linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #F59E0B 100%)"
@@ -337,15 +337,17 @@ const HeroHeader = () => {
 
 const Logo = ({ className }: { className?: string }) => {
   return (
-    <div className={cn("flex items-center space-x-2", className)}>
+    <div className={cn("flex items-center space-x-1 sm:space-x-2", className)}>
       <img
         src="/images/logo.png"
         alt="Sparkfolio Logo"
-        className="h-8 w-auto"
+        className="h-6 sm:h-8 w-auto"
       />
-      <span className="text-2xl ">
+      <span className="text-lg sm:text-2xl">
         <span className="font-inter font-light">spark </span>
-        <span className="font-italiano font-extrabold text-3xl">Folio</span>
+        <span className="font-italiano font-extrabold text-xl sm:text-3xl">
+          Folio
+        </span>
       </span>
     </div>
   );
