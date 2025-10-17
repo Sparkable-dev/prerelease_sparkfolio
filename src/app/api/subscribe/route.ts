@@ -5,35 +5,50 @@ const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Methods': 'POST, OPTIONS',
   'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+  'Access-Control-Max-Age': '86400',
 };
 
 export async function OPTIONS() {
-  return new NextResponse(null, { status: 200, headers: corsHeaders });
+  return new NextResponse(null, { 
+    status: 200, 
+    headers: corsHeaders 
+  });
 }
 
 export async function POST(request: NextRequest) {
+  // Add CORS headers to all responses
+  const addCorsHeaders = (response: NextResponse) => {
+    Object.entries(corsHeaders).forEach(([key, value]) => {
+      response.headers.set(key, value);
+    });
+    return response;
+  };
+
   let email: string = '';
   
   try {
-    // Validate request method
-    if (request.method !== 'POST') {
-      return NextResponse.json(
-        { error: 'Method not allowed' },
-        { status: 405, headers: corsHeaders }
-      );
+    // Parse request body safely
+    let requestData;
+    try {
+      requestData = await request.json();
+    } catch (parseError) {
+      console.log('JSON parse error:', parseError);
+      return addCorsHeaders(NextResponse.json(
+        { error: 'Invalid JSON in request body' },
+        { status: 400 }
+      ));
     }
 
-    const requestData = await request.json();
-    email = requestData.email || '';
-    const { name, listId } = requestData;
+    email = requestData?.email || '';
+    const { name, listId } = requestData || {};
 
     // Validate email format
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!email || !emailRegex.test(email)) {
-      return NextResponse.json(
+      return addCorsHeaders(NextResponse.json(
         { error: 'Valid email is required' },
-        { status: 400, headers: corsHeaders }
-      );
+        { status: 400 }
+      ));
     }
 
     // Brevo API integration
@@ -42,14 +57,14 @@ export async function POST(request: NextRequest) {
     
     if (!BREVO_API_KEY) {
       console.log('BREVO_API_KEY environment variable is not set - using fallback');
-      return NextResponse.json(
+      return addCorsHeaders(NextResponse.json(
         { 
           success: true, 
           message: 'Thanks for joining! We\'ll contact you soon.',
           subscription: { email, alreadyExists: true }
         },
-        { status: 200, headers: corsHeaders }
-      );
+        { status: 200 }
+      ));
     }
 
     // Actual Brevo API integration
@@ -78,52 +93,52 @@ export async function POST(request: NextRequest) {
         
         // For any error, we'll treat it as potentially a duplicate and show success
         // This prevents users from seeing errors when they enter the same email twice
-        return NextResponse.json(
+        return addCorsHeaders(NextResponse.json(
           { 
             success: true, 
             message: 'Thanks for joining! We\'ll contact you soon.',
             subscription: { email, alreadyExists: true }
           },
-          { status: 200, headers: corsHeaders }
-        );
+          { status: 200 }
+        ));
       }
 
       const result = await brevoResponse.json().catch(() => ({}));
       
-      return NextResponse.json(
+      return addCorsHeaders(NextResponse.json(
         { 
           success: true, 
           message: 'Thanks for joining! We\'ll contact you soon.',
           subscription: result
         },
-        { status: 200, headers: corsHeaders }
-      );
+        { status: 200 }
+      ));
     } catch (brevoError) {
       console.log('Brevo API call failed:', brevoError);
       
       // For any error, treat it as success to prevent user-facing errors
       // This handles network issues, duplicate emails, and other API problems gracefully
-      return NextResponse.json(
+      return addCorsHeaders(NextResponse.json(
         { 
           success: true, 
           message: 'Thanks for joining! We\'ll contact you soon.',
           subscription: { email, alreadyExists: true }
         },
-        { status: 200, headers: corsHeaders }
-      );
+        { status: 200 }
+      ));
     }
 
   } catch (error) {
     console.log('Subscription error:', error);
     
     // For any error, treat it as success to prevent user-facing errors
-    return NextResponse.json(
+    return addCorsHeaders(NextResponse.json(
       { 
         success: true, 
         message: 'Thanks for joining! We\'ll contact you soon.',
         subscription: { email: email || 'unknown', alreadyExists: true }
       },
-      { status: 200, headers: corsHeaders }
-    );
+      { status: 200 }
+    ));
   }
 }

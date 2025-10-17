@@ -1,8 +1,8 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  // Enable experimental features for better Railway compatibility
-  serverExternalPackages: [],
+  // Railway compatibility
+  output: 'standalone',
   
   // Optimize for production
   compress: true,
@@ -36,9 +36,15 @@ const nextConfig: NextConfig = {
           { key: 'Access-Control-Allow-Origin', value: '*' },
           { key: 'Access-Control-Allow-Methods', value: 'GET, POST, PUT, DELETE, OPTIONS' },
           { key: 'Access-Control-Allow-Headers', value: 'Content-Type, Authorization' },
+          { key: 'Access-Control-Max-Age', value: '86400' },
         ],
       },
     ];
+  },
+  
+  // Environment variables
+  env: {
+    CUSTOM_KEY: process.env.CUSTOM_KEY,
   },
 };
 
