@@ -5,13 +5,13 @@ import { FeaturesShowcase } from "@/components/FeaturesShowcase";
 import { FounderSection } from "@/components/FounderSection";
 import { EmailCollection } from "@/components/EmailCollection";
 import { Footer } from "@/components/Footer";
+import { HeroSection } from "@/components/blocks/hero-section-1";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <Header />
       <section id="hero">
-        <HeroSectionDemo />
+        <HeroSection />
       </section>
       <AIChatDemo />
       <section id="features">

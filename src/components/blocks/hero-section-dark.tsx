@@ -513,9 +513,9 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
         gradient: "",
       },
       description = "Sed ut perspiciatis unde omnis iste natus voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.",
-      // ctaText = "Browse courses",
-      // ctaHref = "#",
-      // bottomImage = "/images/landing-white.png",
+      ctaText,
+      ctaHref,
+      bottomImage,
       gridOptions,
       ...props
     },
