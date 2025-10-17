@@ -15,7 +15,7 @@ export function Header() {
             <div className="w-10 h-10 rounded-lg overflow-hidden bg-background">
               <Image
                 src="/images/logo.webp"
-                alt="SPARKFOLIO Logo"
+                alt="SparkFolio Logo"
                 width={40}
                 height={40}
                 className="w-full h-full object-contain"
@@ -54,6 +54,12 @@ export function Header() {
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               Waitlist
+            </a>
+            <a
+              href="mailto:hello@sparkfolio.dev"
+              className="text-primary hover:text-primary/80 transition-colors font-medium"
+            >
+              Contact
             </a>
           </nav>
         </div>

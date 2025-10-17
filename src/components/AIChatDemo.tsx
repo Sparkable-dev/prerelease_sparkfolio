@@ -11,6 +11,7 @@ import {
   Zap,
   Crown,
 } from "lucide-react";
+import { ShimmerButton } from "./ui/shimmer-button";
 
 const features = ["Theme Preview", "Checkpoint Restoration", "Image Uploads"];
 
@@ -61,7 +62,7 @@ export function AIChatDemo() {
           {/* Left Section - Feature Description */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-5xl md:text-6xl font-bold mb-8 leading-tight">
+              <h2 className="text-5xl md:text-6xl font-bold mb-8 leading-tight font-inter">
                 Generate Themes With{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-chart-1 to-chart-2 border-2 border-dashed border-chart-1/30 px-2 py-1 rounded-lg">
                   AI
@@ -69,7 +70,7 @@ export function AIChatDemo() {
                 in Seconds
               </h2>
 
-              <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+              <p className="text-xl text-muted-foreground leading-relaxed mb-8 font-inter">
                 Create stunning ready-to-use themes. Just provide an image or
                 text prompt, and our AI does the rest.
               </p>
@@ -77,18 +78,25 @@ export function AIChatDemo() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <a
-                href="#waitlist"
-                className="group bg-yellow-500 text-black px-8 py-4 rounded-2xl font-semibold hover:shadow-lg hover:shadow-chart-1/30 transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
-              >
-                Try it Free
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <a href="#waitlist">
+                <ShimmerButton
+                  className="text-lg font-semibold px-8 py-4"
+                  shimmerColor="#ffffff"
+                  background="linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #F59E0B 100%)"
+                  borderRadius="12px"
+                  shimmerDuration="2s"
+                >
+                  <span className="flex items-center gap-2 font-inter">
+                    Explore Themes
+                    <ArrowRight className="w-5 h-5" />
+                  </span>
+                </ShimmerButton>
               </a>
             </div>
             {/* Theme Showcase */}
             <div className="mt-12">
               <div className="flex items-center justify-between mb-6">
-                <h3 className="text-2xl font-bold text-foreground">
+                <h3 className="text-2xl font-bold text-foreground font-inter">
                   Available Themes
                 </h3>
                 <span className="text-sm text-muted-foreground bg-muted/50 px-3 py-1 rounded-full">
@@ -108,10 +116,10 @@ export function AIChatDemo() {
                           <Icon className="w-4 h-4 text-chart-1" />
                         </div>
                         <div className="text-left">
-                          <h4 className="font-bold text-foreground text-sm">
+                          <h4 className="font-bold text-foreground text-sm font-inter">
                             {preset.name}
                           </h4>
-                          <p className="text-xs text-muted-foreground">
+                          <p className="text-xs text-muted-foreground font-inter">
                             {preset.description}
                           </p>
                         </div>
@@ -132,7 +140,7 @@ export function AIChatDemo() {
                 })}
               </div>
               <div className="mt-4 text-center">
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground font-inter">
                   And many more themes available in the app
                 </p>
               </div>

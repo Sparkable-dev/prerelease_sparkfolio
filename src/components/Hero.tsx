@@ -4,7 +4,7 @@ function HeroSectionDemo() {
   return (
     <div className="pt-20">
       <HeroSection
-        title="SPARKFOLIO"
+        title="SparkFolio"
         subtitle={{
           regular: "Frustrated that building a decent brand identity",
           gradient: "costs more than your entire MVP?",

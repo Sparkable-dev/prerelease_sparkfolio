@@ -1,10 +1,18 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
-import { ArrowRight, ChevronRight, Menu, X, Sparkles } from "lucide-react";
+import {
+  ArrowRight,
+  ChevronRight,
+  Menu,
+  X,
+  Sparkles,
+  Loader2,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AnimatedGroup } from "@/components/ui/animated-group";
+import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { cn } from "@/lib/utils";
 
 const transitionVariants = {
@@ -28,6 +36,44 @@ const transitionVariants = {
 };
 
 export function HeroSection() {
+  const [email, setEmail] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleEmailSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+
+    setIsLoading(true);
+
+    try {
+      const response = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+          name: "",
+          listId: "1",
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setIsSubmitted(true);
+        setEmail("");
+      } else {
+        console.error("Subscription failed:", result.error);
+      }
+    } catch (error) {
+      console.error("Error submitting email:", error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <>
       <HeroHeader />
@@ -49,35 +95,71 @@ export function HeroSection() {
             <div className="mx-auto max-w-7xl px-6">
               <div className="text-center sm:mx-auto lg:mr-auto lg:mt-0">
                 <AnimatedGroup variants={transitionVariants}>
-                  <h1 className="mt-4 max-w-4xl mx-auto text-balance text-6xl md:text-7xl lg:mt-8 xl:text-[5.25rem]">
+                  <h1 className="mt-4 max-w-4xl mx-auto text-balance text-5xl md:text-6xl lg:mt-8 xl:text-7xl font-inter font-bold">
                     Don't spend{" "}
                     <span className="text-red-500 line-through">$2000</span> for
                     brand kit — get{" "}
                     <span className="text-purple-500">tailored brand kit</span>{" "}
-                    for your business with{" "}
-                    <span className="text-purple-500">AI</span> ✨
+                    with <span className="text-purple-500">AI</span> ✨
                   </h1>
-                  <p className="mx-auto mt-8 max-w-2xl text-balance text-lg">
-                    Create professional brand assets, logos, and marketing
-                    materials in minutes with our AI-powered design tools.
+                  <p className="mx-auto mt-8 max-w-2xl text-balance text-base font-inter">
+                    Create professional brand assets in minutes with our
+                    AI-powered design tools.
                   </p>
                 </AnimatedGroup>
 
-                <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-2">
-                  <div className="relative w-full max-w-md">
-                    <input
-                      type="email"
-                      placeholder="Enter your email address"
-                      className="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 pr-32 text-gray-900 placeholder-gray-500 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500/20 dark:border-gray-600 "
-                    />
+                {isSubmitted ? (
+                  <div className="mt-12 flex flex-col items-center justify-center gap-4">
+                    <div className="w-full max-w-md p-6 rounded-xl bg-green-50 border border-green-200 text-center">
+                      <div className="text-green-600 font-semibold mb-2">
+                        🎉 You're all set!
+                      </div>
+                      <p className="text-green-700 text-sm">
+                        Thanks for joining our waitlist! We'll contact you soon
+                        with updates about SparkFolio's launch.
+                      </p>
+                    </div>
                   </div>
-                  <Button
-                    size="lg"
-                    className="w-full rounded-xl px-8 py-3 text-base font-semibold sm:w-auto bg-yellow-500 text-black hover:bg-yellow-600"
+                ) : (
+                  <form
+                    onSubmit={handleEmailSubmit}
+                    className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-2"
                   >
-                    Get Access
-                  </Button>
-                </div>
+                    <div className="relative w-full max-w-md">
+                      <input
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="Enter your email address"
+                        required
+                        className="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 pr-32 text-gray-900 placeholder-gray-500 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500/20 dark:border-gray-600"
+                      />
+                    </div>
+                    <ShimmerButton
+                      type="submit"
+                      disabled={!email || isLoading}
+                      className="w-full sm:w-auto text-lg font-semibold px-8 py-4 disabled:opacity-50 disabled:cursor-not-allowed"
+                      shimmerColor="#ffffff"
+                      background="linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #F59E0B 100%)"
+                      borderRadius="12px"
+                      shimmerDuration="2s"
+                    >
+                      <span className="flex items-center gap-2 font-inter">
+                        {isLoading ? (
+                          <>
+                            <Loader2 className="w-5 h-5 animate-spin" />
+                            Joining...
+                          </>
+                        ) : (
+                          <>
+                            Start Creating
+                            <ArrowRight className="w-5 h-5" />
+                          </>
+                        )}
+                      </span>
+                    </ShimmerButton>
+                  </form>
+                )}
               </div>
             </div>
 
@@ -125,10 +207,9 @@ export function HeroSection() {
 }
 
 const menuItems = [
-  { name: "Features", href: "#link" },
-  { name: "Solution", href: "#link" },
-  { name: "Pricing", href: "#link" },
-  { name: "About", href: "#link" },
+  { name: "Features", href: "#features" },
+  { name: "Waitlist", href: "#waitlist" },
+  { name: "Contact", href: "#footer" },
 ];
 
 const HeroHeader = () => {
@@ -206,30 +287,34 @@ const HeroHeader = () => {
                 </ul>
               </div>
               <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
-                <Button
-                  asChild
-                  size="sm"
-                  className={cn(
-                    isScrolled && "lg:hidden",
-                    "bg-yellow-500 text-black hover:bg-yellow-600"
-                  )}
-                >
-                  <Link href="#">
-                    <span>Get Access</span>
-                  </Link>
-                </Button>
-                <Button
-                  asChild
-                  size="sm"
-                  className={cn(
-                    isScrolled ? "lg:inline-flex" : "hidden",
-                    "bg-yellow-500 text-black hover:bg-yellow-600"
-                  )}
-                >
-                  <Link href="#">
-                    <span>Get Access</span>
-                  </Link>
-                </Button>
+                <Link href="#waitlist">
+                  <ShimmerButton
+                    className={cn(
+                      isScrolled && "lg:hidden",
+                      "text-sm font-semibold px-4 py-2"
+                    )}
+                    shimmerColor="#ffffff"
+                    background="linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #F59E0B 100%)"
+                    borderRadius="8px"
+                    shimmerDuration="2s"
+                  >
+                    <span className="font-inter">Join Waitlist</span>
+                  </ShimmerButton>
+                </Link>
+                <Link href="#waitlist">
+                  <ShimmerButton
+                    className={cn(
+                      isScrolled ? "lg:inline-flex" : "hidden",
+                      "text-sm font-semibold px-4 py-2"
+                    )}
+                    shimmerColor="#ffffff"
+                    background="linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #F59E0B 100%)"
+                    borderRadius="8px"
+                    shimmerDuration="2s"
+                  >
+                    <span className="font-inter">Join Waitlist</span>
+                  </ShimmerButton>
+                </Link>
               </div>
             </div>
           </div>
@@ -249,7 +334,7 @@ const Logo = ({ className }: { className?: string }) => {
       />
       <span className="text-2xl ">
         <span className="font-inter font-light">spark </span>
-        <span className="font-italiano font-extrabold text-3xl">folio</span>
+        <span className="font-italiano font-extrabold text-3xl">Folio</span>
       </span>
     </div>
   );
