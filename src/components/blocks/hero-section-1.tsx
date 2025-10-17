@@ -59,6 +59,14 @@ export function HeroSection() {
         }),
       });
 
+      if (!response.ok) {
+        console.error("HTTP error:", response.status, response.statusText);
+        // Still show success to user to prevent confusion
+        setIsSubmitted(true);
+        setEmail("");
+        return;
+      }
+
       const result = await response.json();
 
       if (result.success) {
@@ -66,6 +74,9 @@ export function HeroSection() {
         setEmail("");
       } else {
         console.error("Subscription failed:", result.error);
+        // Still show success to user to prevent confusion
+        setIsSubmitted(true);
+        setEmail("");
       }
     } catch (error) {
       console.error("Error submitting email:", error);

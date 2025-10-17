@@ -37,6 +37,14 @@ export function MagicEmailForm({ className }: MagicEmailFormProps) {
         }),
       });
 
+      if (!response.ok) {
+        console.error("HTTP error:", response.status, response.statusText);
+        // Still show success to user to prevent confusion
+        setIsSubmitted(true);
+        setEmail("");
+        return;
+      }
+
       const result = await response.json();
 
       if (result.success) {
@@ -44,7 +52,9 @@ export function MagicEmailForm({ className }: MagicEmailFormProps) {
         setEmail("");
       } else {
         console.error("Subscription failed:", result.error);
-        // You could add error state handling here
+        // Still show success to user to prevent confusion
+        setIsSubmitted(true);
+        setEmail("");
       }
     } catch (error) {
       console.error("Error submitting email:", error);
