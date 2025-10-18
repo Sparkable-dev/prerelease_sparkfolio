@@ -149,7 +149,7 @@ export function HeroSection() {
                     <ShimmerButton
                       type="submit"
                       disabled={!email || isLoading}
-                      className="w-full sm:w-auto text-sm sm:text-lg font-semibold px-6 sm:px-8 py-3 sm:py-4 disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="w-full sm:w-auto text-sm sm:text-base font-semibold px-4 py-3 disabled:opacity-50 disabled:cursor-not-allowed"
                       shimmerColor="#ffffff"
                       background="linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #F59E0B 100%)"
                       borderRadius="12px"
@@ -187,22 +187,15 @@ export function HeroSection() {
                 ...transitionVariants,
               }}
             >
-              <div className="relative -mr-0 sm:mr-0 mt-4 overflow-hidden px-2 sm:mt-6 md:mt-8">
+              <div className="relative mt-4 overflow-hidden  sm:mt-6 md:mt-8">
                 <div
                   aria-hidden
-                  className="bg-gradient-to-b to-background absolute inset-0 z-10 from-transparent from-35%"
+                  className="bg-gradient-to-b to-background absolute inset-0 z-10 from-transparent from-[-30%]"
                 />
-                <div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-6xl overflow-hidden rounded-2xl border p-2 sm:p-4 shadow-lg shadow-zinc-950/15 ring-1">
+                <div className="bg-background relative mx-auto max-w-6xl overflow-hidden rounded-2xl">
                   <img
-                    className="bg-background aspect-15/8 relative hidden rounded-2xl dark:block w-full h-auto"
-                    src="/images/landing-white.png"
-                    alt="app screen"
-                    width="2700"
-                    height="1440"
-                  />
-                  <img
-                    className="z-2 border-border/25 aspect-15/8 relative rounded-2xl border dark:hidden w-full h-auto"
-                    src="/images/landing-white.png"
+                    className="object-cover relative rounded-2xl w-full h-auto"
+                    src="/images/landing.png"
                     alt="app screen"
                     width="2700"
                     height="1440"

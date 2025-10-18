@@ -16,6 +16,10 @@ export function SpectacularWaitingListCTA() {
     <section
       id="waitlist"
       className="py-12 sm:py-16 md:py-20 lg:py-24 relative overflow-hidden"
+      style={{
+        background:
+          "radial-gradient(circle at center, #fef3c7 0%, #ffffff 50%, #e9d5ff 100%)",
+      }}
     >
       {/* Animated background particles */}
       <div className="absolute inset-0">
