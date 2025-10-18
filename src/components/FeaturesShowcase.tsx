@@ -115,24 +115,8 @@ export function FeaturesShowcase() {
                   {/* Header with Icon and Title */}
                   <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
                     {/* Icon */}
-                    <div
-                      className={`${
-                        isLarge
-                          ? "w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16"
-                          : isWide
-                          ? "w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14"
-                          : "w-10 h-10 sm:w-12 sm:h-12"
-                      } rounded-2xl bg-gradient-to-br from-blue-50 to-purple-50 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg flex-shrink-0`}
-                    >
-                      <Icon
-                        className={`${
-                          isLarge
-                            ? "w-5 h-5 sm:w-6 sm:h-6 lg:w-6 lg:h-6"
-                            : isWide
-                            ? "w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7"
-                            : "w-5 h-5 sm:w-6 sm:h-6"
-                        } text-blue-600`}
-                      />
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-gradient-to-br from-blue-50 to-purple-50 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg flex-shrink-0">
+                      <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
                     </div>
 
                     {/* Title */}
