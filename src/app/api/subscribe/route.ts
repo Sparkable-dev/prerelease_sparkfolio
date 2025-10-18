@@ -69,6 +69,9 @@ export async function POST(request: NextRequest) {
 
     // Actual Brevo API integration
     try {
+      console.log('Making Brevo API call with key:', BREVO_API_KEY ? 'Key present' : 'No key');
+      console.log('List ID:', BREVO_LIST_ID);
+      
       // First try to create/update the contact
       const brevoResponse = await fetch('https://api.brevo.com/v3/contacts', {
         method: 'POST',
@@ -85,6 +88,8 @@ export async function POST(request: NextRequest) {
           smsBlacklisted: false,
         }),
       });
+      
+      console.log('Brevo response status:', brevoResponse.status);
 
       if (!brevoResponse.ok) {
         const errorData = await brevoResponse.json().catch(() => ({}));
