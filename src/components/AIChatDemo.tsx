@@ -148,7 +148,7 @@ export function AIChatDemo() {
           </div>
 
           {/* Right Section - Image and GIF Display */}
-          <div className="relative grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 items-start">
+          <div className="relative grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 items-start w-full max-w-none md:max-w-none">
             {/* Image Section */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
@@ -157,7 +157,7 @@ export function AIChatDemo() {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              <div className="backdrop-blur-sm rounded-xl overflow-hidden h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[800px]">
+              <div className="backdrop-blur-sm rounded-xl overflow-hidden h-[500px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[800px] w-full max-w-full">
                 <div className="h-full">
                   <img
                     src="/images/aichat.png"
@@ -176,7 +176,7 @@ export function AIChatDemo() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
             >
-              <div className="backdrop-blur-sm rounded-xl mt-0 sm:mt-[-5] overflow-hidden w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[800px]">
+              <div className="backdrop-blur-sm rounded-xl mt-0 sm:mt-[-5] overflow-hidden w-full h-[500px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[800px] max-w-full">
                 <div className="h-full">
                   <img
                     src="/images/gif.gif"

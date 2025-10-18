@@ -300,24 +300,7 @@ const HeroHeader = () => {
               <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
                 <Link href="#waitlist">
                   <ShimmerButton
-                    className={cn(
-                      isScrolled && "lg:hidden",
-                      "text-xs sm:text-sm font-semibold px-3 sm:px-4 py-2"
-                    )}
-                    shimmerColor="#ffffff"
-                    background="linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #F59E0B 100%)"
-                    borderRadius="8px"
-                    shimmerDuration="2s"
-                  >
-                    <span className="font-inter">Join Waitlist</span>
-                  </ShimmerButton>
-                </Link>
-                <Link href="#waitlist">
-                  <ShimmerButton
-                    className={cn(
-                      isScrolled ? "lg:inline-flex" : "hidden",
-                      "text-xs sm:text-sm font-semibold px-3 sm:px-4 py-2"
-                    )}
+                    className="text-xs sm:text-sm font-semibold px-3 sm:px-4 py-2"
                     shimmerColor="#ffffff"
                     background="linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #F59E0B 100%)"
                     borderRadius="8px"
