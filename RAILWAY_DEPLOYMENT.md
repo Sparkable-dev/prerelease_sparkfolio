@@ -6,8 +6,8 @@ Set these environment variables in your Railway project:
 
 ### Required Variables:
 
-- `BREVO_API_KEY`: Your Brevo API key for email subscriptions
-- `BREVO_LIST_ID`: Your Brevo list ID (default: 1)
+- `BREVO_API_KEY`: `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`
+- `BREVO_LIST_ID`: `1` (or your specific list ID)
 
 ### Optional Variables:
 

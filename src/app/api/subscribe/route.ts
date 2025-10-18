@@ -56,14 +56,14 @@ export async function POST(request: NextRequest) {
     const BREVO_LIST_ID = process.env.BREVO_LIST_ID || listId || '1';
     
     if (!BREVO_API_KEY) {
-      console.log('BREVO_API_KEY environment variable is not set - using fallback');
+      console.error('BREVO_API_KEY environment variable is not set');
       return addCorsHeaders(NextResponse.json(
         { 
-          success: true, 
-          message: 'Thanks for joining! We\'ll contact you soon.',
-          subscription: { email, alreadyExists: true }
+          success: false, 
+          error: 'Service temporarily unavailable. Please try again later.',
+          message: 'We\'re experiencing technical difficulties. Please try again in a few minutes.'
         },
-        { status: 200 }
+        { status: 503 }
       ));
     }
 
@@ -88,18 +88,30 @@ export async function POST(request: NextRequest) {
 
       if (!brevoResponse.ok) {
         const errorData = await brevoResponse.json().catch(() => ({}));
-        console.log('Brevo API error:', errorData);
-        console.log('Error status:', brevoResponse.status);
+        console.error('Brevo API error:', errorData);
+        console.error('Error status:', brevoResponse.status);
         
-        // For any error, we'll treat it as potentially a duplicate and show success
-        // This prevents users from seeing errors when they enter the same email twice
+        // Handle specific Brevo API errors
+        if (brevoResponse.status === 400 && errorData.code === 'duplicate_parameter') {
+          // Email already exists - treat as success
+          return addCorsHeaders(NextResponse.json(
+            { 
+              success: true, 
+              message: 'Thanks for joining! We\'ll contact you soon.',
+              subscription: { email, alreadyExists: true }
+            },
+            { status: 200 }
+          ));
+        }
+        
+        // For other errors, return a proper error response
         return addCorsHeaders(NextResponse.json(
           { 
-            success: true, 
-            message: 'Thanks for joining! We\'ll contact you soon.',
-            subscription: { email, alreadyExists: true }
+            success: false, 
+            error: 'Failed to process subscription',
+            message: 'We\'re experiencing technical difficulties. Please try again later.'
           },
-          { status: 200 }
+          { status: 500 }
         ));
       }
 
@@ -114,31 +126,30 @@ export async function POST(request: NextRequest) {
         { status: 200 }
       ));
     } catch (brevoError) {
-      console.log('Brevo API call failed:', brevoError);
+      console.error('Brevo API call failed:', brevoError);
       
-      // For any error, treat it as success to prevent user-facing errors
-      // This handles network issues, duplicate emails, and other API problems gracefully
+      // Handle network errors and other API issues
       return addCorsHeaders(NextResponse.json(
         { 
-          success: true, 
-          message: 'Thanks for joining! We\'ll contact you soon.',
-          subscription: { email, alreadyExists: true }
+          success: false, 
+          error: 'Network error',
+          message: 'We\'re experiencing technical difficulties. Please try again later.'
         },
-        { status: 200 }
+        { status: 503 }
       ));
     }
 
   } catch (error) {
-    console.log('Subscription error:', error);
+    console.error('Subscription error:', error);
     
-    // For any error, treat it as success to prevent user-facing errors
+    // Handle unexpected errors
     return addCorsHeaders(NextResponse.json(
       { 
-        success: true, 
-        message: 'Thanks for joining! We\'ll contact you soon.',
-        subscription: { email: email || 'unknown', alreadyExists: true }
+        success: false, 
+        error: 'Internal server error',
+        message: 'We\'re experiencing technical difficulties. Please try again later.'
       },
-      { status: 200 }
+      { status: 500 }
     ));
   }
 }
