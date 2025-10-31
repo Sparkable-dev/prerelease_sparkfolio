@@ -14,7 +14,7 @@ export function Header() {
           >
             <div className="w-10 h-10 rounded-lg overflow-hidden bg-background">
               <Image
-                src="/images/logo.webp"
+                src="/images/logo.png"
                 alt="SparkFolio Logo"
                 width={40}
                 height={40}
