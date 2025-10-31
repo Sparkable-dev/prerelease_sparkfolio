@@ -162,4 +162,54 @@
   .animate-spin-around {
     animation: spin-around var(--speed) linear infinite;
   }
+
+  /* Blog Content Styles */
+  .blog-content {
+    @apply text-foreground;
+  }
+
+  /* Remove shadow from blog cards */
+  [href^="/blogs/"] *,
+  [href^="/blogs/"] *::before,
+  [href^="/blogs/"] *::after {
+    box-shadow: none !important;
+  }
+  
+  [href^="/blogs/"]:hover *,
+  [href^="/blogs/"]:hover *::before,
+  [href^="/blogs/"]:hover *::after {
+    box-shadow: none !important;
+  }
+
+  .blog-content h1,
+  .blog-content h2,
+  .blog-content h3,
+  .blog-content h4 {
+    @apply scroll-mt-24;
+  }
+
+  .blog-content a.anchor-link {
+    @apply no-underline;
+  }
+
+  .blog-content a.anchor-link::after {
+    content: "#";
+    @apply ml-2 text-primary opacity-0 transition-opacity;
+  }
+
+  .blog-content a.anchor-link:hover::after {
+    @apply opacity-100;
+  }
+
+  .blog-content img {
+    @apply my-8 rounded-lg border shadow-lg w-full;
+  }
+
+  .blog-content code {
+    @apply before:content-[''] after:content-[''];
+  }
+
+  .blog-content pre code {
+    @apply block p-4 overflow-x-auto;
+  }
 }
