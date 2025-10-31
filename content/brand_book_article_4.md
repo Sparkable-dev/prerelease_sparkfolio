@@ -4,7 +4,7 @@
 
 ---
 
-![Hand hovering over laptop with strategy notes](images/article4_img1.webp)
+![Hand hovering over laptop with strategy notes](/images/article4_img1.webp)
 
 ---
 
@@ -107,7 +107,7 @@ Before you design anything, you should know:
 
 ---
 
-![Brand strategy worksheet layout](images/article4_img2.webp)
+![Brand strategy worksheet layout](/images/article4_img2.webp)
 
 ---
 

@@ -4,7 +4,7 @@
 
 ---
 
-![Brand book workspace with design materials](images/article1_img1.webp)
+![Brand book workspace with design materials](/images/article1_img1.webp)
 
 ---
 
@@ -17,6 +17,7 @@ That's where a brand book comes in — and it's not just a "nice-to-have" for bi
 A brand book (also called brand guidelines or a brand style guide) is a comprehensive document that defines every visual and tonal element of your brand. Think of it as your brand's instruction manual — a single source of truth that tells anyone working with your brand exactly how to represent it.
 
 It typically includes:
+
 - **Logo guidelines** (usage, spacing, variations)
 - **Color palette** (primary, secondary, and accent colors with exact codes)
 - **Typography** (fonts for headings, body text, and digital use)
@@ -48,7 +49,7 @@ Imagine hiring a new marketing person, a freelance designer, or a PR agency. Wit
 
 ---
 
-![Before and after comparison of brand consistency](images/article1_img2.webp)
+![Before and after comparison of brand consistency](/images/article1_img2.webp)
 
 ---
 
@@ -81,6 +82,7 @@ Let's be honest: people judge books by their covers. A consistent, polished bran
 The best time? **Before you launch.** The second best time? **Right now.**
 
 You don't need to wait until you're a large company with a big budget. In fact, startups benefit the most from having a brand book early because:
+
 - You're building everything from scratch
 - You're likely working with freelancers or small teams
 - You need to move fast without sacrificing consistency
@@ -91,6 +93,7 @@ Even if you're bootstrapping, a simple 10-15 page brand book can be a game-chang
 ## What Makes a Good Brand Book?
 
 A good brand book is:
+
 - **Clear and concise** — no jargon, just straightforward instructions
 - **Visual** — show examples, not just descriptions
 - **Accessible** — easy to share and reference (PDF, cloud link, or web version)

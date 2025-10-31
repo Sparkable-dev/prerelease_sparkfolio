@@ -4,7 +4,7 @@
 
 ---
 
-![Brand DNA conceptual illustration](images/article2_img1.webp)
+![Brand DNA conceptual illustration](/images/article2_img1.webp)
 
 ---
 
@@ -54,7 +54,7 @@ When all these layers are documented together, you don't just have guidelines â€
 
 ---
 
-![Four layers of brand DNA infographic](images/article2_img2.webp)
+![Four layers of brand DNA infographic](/images/article2_img2.webp)
 
 ---
 

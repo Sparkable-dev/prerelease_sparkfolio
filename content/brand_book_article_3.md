@@ -4,7 +4,7 @@
 
 ---
 
-![Agency team versus solo entrepreneur comparison](images/article3_img1.webp)
+![Agency team versus solo entrepreneur comparison](/images/article3_img1.webp)
 
 ---
 
@@ -51,7 +51,7 @@ And here's the beautiful part: **you can build this system yourself, or with min
 
 ---
 
-![Idea to identity system flowchart](images/article3_img2.webp)
+![Idea to identity system flowchart](/images/article3_img2.webp)
 
 ---
 
